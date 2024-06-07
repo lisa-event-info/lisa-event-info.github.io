@@ -4,7 +4,7 @@ body{
     font: size 100%;
     line-height:1.4;
     font-family:monospace;
-    font-style:italic;
+    font-style:normal;
     font-weight:normal;
     text-align:left;
     text-decoration:none;
@@ -15,5 +15,6 @@ body{
 body h1{
     color:deeppink;
     font-size: 60px;
+    font-style: italic;
     margin: 40px;
 }
