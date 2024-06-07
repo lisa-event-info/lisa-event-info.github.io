@@ -1,7 +1,7 @@
 body{
     color:red;
     background-color:beige;
-    font-size:185%;
+    font: size 100%;
     line-height:1.4;
     font-family:monospace;
     font-style:italic;
@@ -9,5 +9,5 @@ body{
     text-align:left;
     text-decoration:none;
     letter-spacing:normal;
-    margin:1.8em;
+    margin:1.2em;
 }
