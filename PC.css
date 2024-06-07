@@ -1,7 +1,7 @@
 body{
-    color:deeppink;
+    color:black;
     background-color:lightgray;
-    font-size:185%;
+    font: size 100%;
     line-height:1.4;
     font-family:monospace;
     font-style:italic;
@@ -15,5 +15,5 @@ body{
 body h1{
     color:deeppink;
     font-size: 230%;
-    margin: 1em;
+    margin: 1.2em;
 }
