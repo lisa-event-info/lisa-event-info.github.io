@@ -11,3 +11,9 @@ body{
     letter-spacing:normal;
     margin:1.8em;
 }
+
+body h1{
+    color:deeppink;
+    font-size: 230%;
+    margin: 1em;
+}
