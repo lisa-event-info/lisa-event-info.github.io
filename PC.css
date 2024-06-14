@@ -1,20 +1,37 @@
-body{
-    color:black;
-    background-color:lightgray;
-    font: size 100%;
-    line-height:1.4;
-    font-family:monospace;
-    font-style:normal;
-    font-weight:normal;
-    text-align:left;
-    text-decoration:none;
-    letter-spacing:normal;
-    margin:1.8em;
+body {
+    color: black;
+    background-color: lightgray;
+    font-size: 30px;
+    line-height: 1.4;
+    font-family: monospace;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: normal;
+    margin: 100px;
 }
-
 body h1{
     color:deeppink;
-    font-size: 60px;
-    font-style: italic;
-    margin: 40px;
+    font-size:55px;
+    font-style:italic;
+    margin-left:50px
+}
+    body h3 {
+        font-size: 32px;
+    }
+body h4 {
+    font-size: 25px;
+    margin-left:75px
+}
+body h5{
+
+}
+body p{
+    color:#333631;
+    font-size:35px;
+}
+body li{
+    font-size:27px;
+    margin:10px 0px 10px 0px/*上下10px*/
 }
