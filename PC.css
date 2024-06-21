@@ -32,3 +32,6 @@ body li{
     font-size:27px;
     margin:10px 0px 10px 0px/*上下10px*/
 }
+.js-base{
+    display: none;
+}
