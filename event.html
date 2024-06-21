@@ -31,7 +31,7 @@
                     data.forEach(entry => {
                         const copy = baseHtml.cloneNode(true);
                         copy.classList.remove('js-base');
-                        copy.querySelector('.spreadsheets--content').innerHTML = entry.title + " " + entry.time + " " + entry.content;
+                        copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
                         spreadsheets.appendChild(copy);
                     });
                 }
