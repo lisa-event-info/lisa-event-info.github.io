@@ -16,6 +16,7 @@
         <li><u>7/9 体育祭 ＠相模原ギオンアリーナ <a href="https://maps.app.goo.gl/x8oCnNJRqNQDP8PE9" target="_blank">アクセス</a></u></li>
         <li><u>7/17(水) DJライブ @LiSA校 視聴覚室</u></li>
         <li><u>7/23(火) 軽音ライブ @視聴覚室</u></li>
+        <li id="load-base"><u id="load-text"></u></li>
         <li class="spreadsheets--item js-base"> <!-- この後ループするから何か入れるならこの前に -->        
             <section>
                 <u class="spreadsheets--content"></u> <!-- 内容について --> 
@@ -35,8 +36,36 @@
                         spreadsheets.appendChild(copy);
                     });
                 }
-
                 loadData();
+
+                function sleep(waitSec, callbackFunc) {
+
+                    // 経過時間（秒）
+                    var spanedSec = 0;
+
+                    // 1秒間隔で無名関数を実行
+                    var id = setInterval(function () {
+
+                        spanedSec++;
+
+                        // 経過時間 >= 待機時間の場合、待機終了。
+                        if (spanedSec >= waitSec) {
+
+                            // タイマー停止
+                            clearInterval(id);
+
+                            // 完了時、コールバック関数を実行
+                            if (callbackFunc) callbackFunc();
+                        }
+                    }, 1000);
+
+                }
+
+                document.getElementById('load-text').textContent = "読み込み中...";
+                sleep(2, function(){
+                    document.getElementById('load-text').textContent = "";
+                    document.getElementById('load-base').style.display = "none";
+                });
             </script> <!-- jsここまで -->
         </li>
     </ul>
