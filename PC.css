@@ -1,7 +1,8 @@
+/*PCのCSS*/
 body {
     color: black;
     background-color: lightgray;
-    font-size: 30px;
+    font-size: 1.5vw;
     line-height: 1.4;
     font-family: monospace;
     font-style: normal;
@@ -13,24 +14,31 @@ body {
 }
 body h1{
     color:#188188;
-    font-size:55px;
+    font-size:3.6vw;
     font-style:italic;
-    margin-left:50px
+    margin-left:50px;
 }
-    body h3 {
-    font-size: 32px;
-    }
+body h3 {
+    font-size: 32px;/*h3使ってない*/
+}
 body h4 {
-    font-size: 25px;
+    font-size: 1.65vw;
     margin-left:75px
+}
+body h5{
+    font-size:1.5vw;
+    margin-right: 70px;
 }
 body p{
     color:#333631;
-    font-size:35px;
+    font-size:2.27vw;
 }
 body li{
-    font-size:27px;
-    margin:10px 0px 10px 0px/*上下10px*/
+    font-size:1.753vw;
+    margin:10px 0px 10px 0px/*上下のみ10px*/
+}
+body s{
+    color: gray;/*取り消し線の色*/
 }
 .js-base{
     display: none;
