@@ -1,13 +1,42 @@
-body{
-    color:red;
-    background-color:beige;
-    font: size 100%;
+/*モバイルのCSS*/
+body {
+    color: black;
+    background-color: beige;
+    font-size:2.5vw;
     line-height:1.4;
     font-family:monospace;
-    font-style:italic;
+    font-style:normal;
     font-weight:normal;
     text-align:left;
     text-decoration:none;
     letter-spacing:normal;
-    margin:1.2em;
+    margin:4.5vw;
+}
+body h1{
+    color:#3b7960;
+    font-size:7vw;
+    font-style:italic;
+    margin:0px;
+}
+body h3{
+
+}
+body h4{
+    font-size:3.3vw;
+    margin:0px;
+}
+body h5{
+    font-size:3vw;
+    margin-right:70px;
+}
+body p{
+    color:#333631;
+    font-size:4.54vw;
+}
+body li{
+    font-size:3.506vw;
+    margin:10px 0px 10px 0px/*上下のみ10px*/
+}
+body s{
+    color:gray;/*取り消し線の色*/
 }
