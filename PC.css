@@ -16,14 +16,14 @@ body h1{
     color:#188188;
     font-size:3.6vw;
     font-style:italic;
-    margin-left:50px;
+    margin:0px 0px 0px 50px;/*左75px*/
 }
 body h3 {
     font-size: 32px;/*h3使ってない*/
 }
 body h4 {
     font-size: 1.65vw;
-    margin-left:75px
+    margin:0px 0px 0px 75px/*左75px*/
 }
 body h5{
     font-size:1.5vw;
@@ -35,7 +35,7 @@ body p{
 }
 body li{
     font-size:1.753vw;
-    margin:10px 0px 10px 0px/*上下のみ10px*/
+    margin:10px 0px/*上下のみ10px*/
 }
 body s{
     color: gray;/*取り消し線の色*/
