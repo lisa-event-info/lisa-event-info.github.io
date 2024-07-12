@@ -18,6 +18,12 @@ body h1{
     font-style:italic;
     margin:0px 0px 0px 50px;/*左75px*/
 }
+body h2{
+    color:#188188;
+    font-size:3.6vw;
+    font-style:italic;
+    margin:0px 0px 0px 50px;/*左75px*/
+}
 body h3 {
     font-size: 32px;/*h3使ってない*/
 }
