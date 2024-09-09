@@ -18,6 +18,9 @@ body h1{
     font-style:italic;
     margin:0px 0px 0px 50px;/*左75px*/
 }
+body p{
+    margin: 0px 0px 0px 80px;
+}
 body h2{
     color:#188188;
     font-size:3.6vw;
@@ -25,7 +28,9 @@ body h2{
     margin:0px 0px 0px 50px;/*左75px*/
 }
 body h3 {
-    font-size: 32px;/*h3使ってない*/
+    color:#333631;
+    font-size:2.27vw;/*元35px*/
+    font-weight:100;
 }
 body h4 {
     font-size: 1.65vw;
@@ -35,16 +40,12 @@ body h5{
     font-size:1.5vw;
     margin-right: 70px;
 }
-body p{
-    color:#333631;
-    font-size:2.27vw;
-}
 body li{
     font-size:1.753vw;
     margin:10px 0px/*上下のみ10px*/
 }
 body s{
-    color: gray;/*取り消し線の色*/
+    color: gray;/*取り消し線の字の色*/
 }
 .js-base{
     display: none;
