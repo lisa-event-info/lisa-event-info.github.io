@@ -1,7 +1,8 @@
 /*PCのCSS*/
 body {
     color: black;
-    background-color: lightgray;
+    /*background-color: lightgray;*/
+    background-image: url(https://github.com/user-attachments/assets/96b33f1a-bc3f-4316-ae96-ca5bb1791038);
     font-size: 1.5vw;
     line-height: 1.4;
     font-family: monospace;
