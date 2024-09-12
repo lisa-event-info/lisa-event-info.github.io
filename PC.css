@@ -12,6 +12,9 @@ body {
     letter-spacing: normal;
     margin: 100px;
 }
+body span{
+    background-color: #89c997;
+}
 body h1{
     color:#188188;
     font-size:3.6vw;
