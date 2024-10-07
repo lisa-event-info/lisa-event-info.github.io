@@ -1,7 +1,8 @@
 /*モバイルのCSS*/
 body {
     color: black;
-    background-color: beige;
+    /*background-color: beige;*/
+    background-image: url(https://github.com/user-attachments/assets/9743cc47-df68-4be3-a4af-51d3abd643bb);
     font-size:2.5vw;
     line-height:1.4;
     font-family:monospace;
