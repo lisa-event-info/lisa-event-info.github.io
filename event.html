@@ -21,6 +21,9 @@
             <script>
                 const baseHtml = document.querySelector('.spreadsheets--item.js-base');
                 const spreadsheets = document.querySelector('.spreadsheets');
+
+                document.getElementById('load-text').textContent = "読み込み中...";
+
                 const apiURL = "https://script.google.com/macros/s/AKfycbzJpJgiYKYPIEKxVGdyBrJPO2yAjQqEfrW5vtosifUXB0rxEgtT3NE0Kd3a-NvsPRIt/exec";
 
                 async function loadData() {
@@ -34,37 +37,15 @@
                             spreadsheets.appendChild(copy);
                         }
                     });
+
+                    loadTextDisplay()
                 }
                 loadData();
 
-                function sleep(waitSec, callbackFunc) {
-
-                    // 経過時間（秒）
-                    var spanedSec = 0;
-
-                    // 1秒間隔で無名関数を実行
-                    var id = setInterval(function () {
-
-                        spanedSec++;
-
-                        // 経過時間 >= 待機時間の場合、待機終了。
-                        if (spanedSec >= waitSec) {
-
-                            // タイマー停止
-                            clearInterval(id);
-
-                            // 完了時、コールバック関数を実行
-                            if (callbackFunc) callbackFunc();
-                        }
-                    }, 1000);
-
-                }
-
-                document.getElementById('load-text').textContent = "読み込み中...";
-                sleep(2, function(){
+                function loadTextDisplay(){
                     document.getElementById('load-text').textContent = "";
                     document.getElementById('load-base').style.display = "none";
-                });
+                }
             </script> <!-- jsここまで -->
         </li>
     </ul>
