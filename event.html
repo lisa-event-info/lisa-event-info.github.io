@@ -30,17 +30,23 @@
                     // apiURLのデータをjson化
                     const response = await fetch(apiURL);
                     const data = await response.json();
-                    
+
+                    // イベント一覧の表示
                     data.forEach(entry => {
                         const copy = baseHtml.cloneNode(true);
                         copy.classList.remove('js-base');
+
                         copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
+
+                        // もしキーワードがある場合、その詳細に飛ぶURLを載せる
+                        if(entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML += " <a href='explanation.html?keyword=" + entry.keyword + "'>詳細</a>";
+
                         if(entry.time != ''){
                             spreadsheets.appendChild(copy);
                         }
-                    });
 
-                    loadTextDisplay()
+                        loadTextDisplay();
+                    });
                 }
                 loadData();
 

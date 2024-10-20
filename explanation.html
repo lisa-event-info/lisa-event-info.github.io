@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>詳細ページ</title>
+    <link href="mobile.css" rel="stylesheet" type="text/css" media="(max-width:800px)" />
+    <link href="PC.css" rel="stylesheet" type="text/css" media="(min-width:801px)" /> 
+</head>
+<header>
+    
+</header>
+<body>
+    <h1 id="h1-text">読み込み中...</h1>
+    <ul>
+        <li id="title-text"></li>
+        <li id="time-text"></li>
+        <li id="explanation-text"></li>
+    </ul>
+    <script>
+        const apiURL = "https://script.google.com/macros/s/AKfycbzjyRh41LBmY4n1X4fTAFhZqktVelU1QfTQM0jERskMoFgdbyJo2AZya196ReNYimsp/exec";
+
+        // URLを取得し、クエリパラメータからキーワードの値を取得する
+        const currentUrl = window.location.href;
+        const url = new URL(currentUrl);
+        const params = new URLSearchParams(url.search);
+        const value = params.get('keyword');
+
+        async function loadData() {
+            // apiURLのデータをjson化
+            const response = await fetch(apiURL);
+            const data = await response.json();
+
+            // キーワードが一致するオブジェクトを取得
+            const result = data.find(item => item.keyword === value);
+
+            if (result) {
+                // 一致するオブジェクトが存在する場合
+                document.getElementById('h1-text').textContent = result.content + "の詳細";
+                document.getElementById('title-text').textContent = "場所: " + result.title;
+                document.getElementById('time-text').textContent = "日時: " + result.time;
+                document.getElementById('explanation-text').textContent = "説明: " + result.explanation;
+            } else {
+                // 一致するオブジェクトが存在しない場合
+                document.getElementById('h1-text').textContent = "エラーページ";
+            }
+        }
+        loadData();
+    </script>
+    <footer>
+        <h5><a href="event.html">戻る→</a></h5>
+    </footer>
+</body>
+</html>
