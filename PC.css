@@ -21,11 +21,11 @@ body footer{
     bottom: 10vw;
     right: 10vw;
 }
-body header{
+/*body header{
     position:absolute;
     bottom:10vw;
     right:10vw;
-}
+}*/
 body h1{
     color:#188188;
     font-size:3.6vw;
