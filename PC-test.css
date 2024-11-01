@@ -1,0 +1,67 @@
+/*PCのCSS*/
+body {
+    color: black;
+    /*background-color: lightgray;*/
+    background-image: url(https://github.com/user-attachments/assets/9743cc47-df68-4be3-a4af-51d3abd643bb);
+    font-size: 1.5vw;
+    line-height: 1.4;
+    font-family: monospace;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: normal;
+    margin: 100px;
+}
+/*body span{
+    background-color: #89c997; #f7b977 or #89c997
+}*/
+body footer{
+    position:absolute;
+    bottom: 10vw;
+    right: 10vw;
+}
+/*body header{
+    position:absolute;
+    bottom:10vw;
+    right:10vw;
+}*/
+body h1{
+    color:#188188;
+    font-size:3.6vw;
+    font-style:italic;
+    margin:0px 0px 0px 50px;/*左75px*/
+}
+body p{
+    margin: 0px 0px 0px 80px;
+}
+body h2{
+    color:#188188;
+    font-size:3.6vw;
+    font-style:italic;
+    margin:0px 0px 0px 50px;/*左75px*/
+}
+body h3 {
+    color:#333631;
+    font-size:2.27vw;/*元35px*/
+    font-weight:100;
+}
+body h4 {
+    font-size: 2vw;
+    font-style: italic;
+    margin:-1.5vw 0vw 0vw 16vw/*左75px*/
+}
+body h5{
+    font-size:1.5vw;
+    margin-right: 70px;
+}
+body li{
+    font-size:1.753vw;
+    margin:10px 0px/*上下のみ10px*/
+}
+body s{
+    color: gray;/*取り消し線の字の色*/
+}
+.js-base{
+    display: none;
+} 
