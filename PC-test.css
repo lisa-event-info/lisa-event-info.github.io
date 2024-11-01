@@ -21,11 +21,25 @@ body footer{
     bottom: 10vw;
     right: 10vw;
 }
-/*body header{
-    position:absolute;
-    bottom:10vw;
-    right:10vw;
-}*/
+body header{
+    width: 100%;
+    background-color: white;
+    padding: 0 2%;
+    display: flex;
+}
+.title{
+    font-size: 1.8vw;
+    margin-top: 0.5vw;
+}
+.menu-group{
+    margin:0.5vw;
+    display: flex;
+    list-style: none;
+}
+.menu-item{
+    font-size: 1.8vw;
+    margin:0vw 0vw 0vw 7vw;
+}
 body h1{
     color:#188188;
     font-size:3.6vw;
