@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>イベント情報</title>
+    <link href="mobile.css" rel="stylesheet" type="text/css" media="(max-width:800px)" />
+    <link href="PC.css" rel="stylesheet" type="text/css" media="(min-width:801px)" /> 
+</head>
+<header>
+    
+</header>
+<body>
+    <h2>LiSA校のイベント情報を発信しています</h2>
+    <ul class="spreadsheets">
+        <li id="load-base"><u id="load-text"></u></li>
+        <li class="spreadsheets--item js-base"> <!-- この後ループするから何か入れるならこの前に -->        
+            <section>
+                <u class="spreadsheets--content"></u> <!-- 内容について --> 
+            </section> <!-- ループ終了 jsここから -->
+            <script>
+                const baseHtml = document.querySelector('.spreadsheets--item.js-base');
+                const spreadsheets = document.querySelector('.spreadsheets');
+
+                document.getElementById('load-text').textContent = "読み込み中...";
+
+                const apiURL = "https://script.google.com/macros/s/AKfycbwj_2jYFAV0NJCd24M-WzDuC1yJL1o9T6rHmPZJqPaxzBurIWITFjAjp15s7V24Zd6yZg/exec";
+
+                async function loadData() {
+                    // apiURLのデータをjson化
+                    const response = await fetch(apiURL);
+                    const data = await response.json();
+
+                    // イベント一覧の表示
+                    data.forEach(entry => {
+                        const copy = baseHtml.cloneNode(true);
+                        copy.classList.remove('js-base');
+
+                        copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
+
+                        // もしキーワードがある場合、その詳細に飛ぶURLを載せる
+                        if(entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML += " <a href='explanation.html?keyword=" + entry.keyword + "'>詳細</a>";
+
+                        if(entry.time != ''){
+                            spreadsheets.appendChild(copy);
+                        }
+
+                        loadTextDisplay();
+                    });
+                }
+                loadData();
+
+                // 「読み込み中...」を消す関数
+                function loadTextDisplay(){
+                    document.getElementById('load-text').textContent = "";
+                    document.getElementById('load-base').style.display = "none";
+                }
+            </script> <!-- jsここまで -->
+        </li>
+    </ul>
+    <footer>
+        <h5><a href="index.html">←戻る</a></h5>
+    </footer>
+</body>
+</html>
