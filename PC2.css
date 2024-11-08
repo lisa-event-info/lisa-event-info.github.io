@@ -27,8 +27,8 @@ body header{
     display: flex;
 }
 .title{
-    font-size: 3vw;
     margin-top: 0.5vw;
+    font-size: 3vw;
 }
 .menu-group{
     margin:0vw;
@@ -36,8 +36,10 @@ body header{
     list-style: none;
 }
 .menu-item{
+    margin-left:9vw;
     font-size: 1.8vw;
-    margin:1.1vw 0vw 0vw 9vw;
+    align-items: center;
+    display: inline-block;
 }
 .BackPage{
     font-size:1.5vw;
