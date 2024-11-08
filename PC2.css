@@ -85,3 +85,7 @@ body s{
 .js-base{
     display: none;
 } 
+
+#menuButton{
+    display: none;
+}
