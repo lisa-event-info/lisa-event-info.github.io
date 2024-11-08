@@ -53,15 +53,15 @@ body h1{
     font-style:italic;
     margin:15px 0px 0px 50px;/*左75px*/
 }
-body p{
+/*body p{
 
 }
 body h2{
-    /*color:#188188;
+    color:#188188;
     font-size:3.6vw;
     font-style:italic;
-    margin:0px 0px 0px 50px;/*左75px*/
-}
+    margin:0px 0px 0px 50px; 左75px
+}*/
 body h3 {
     color:#333631;
     font-size:2.27vw;/*元35px*/
@@ -72,9 +72,9 @@ body h4 {
     font-style: italic;
     margin:-1.5vw 0vw 0vw 16vw/*左75px*/
 }
-body h5{
+/*body h5{
 
-}
+}*/
 body li{
     font-size:1.753vw;
     margin:10px 0px/*上下のみ10px*/
