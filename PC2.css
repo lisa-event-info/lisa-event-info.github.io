@@ -24,27 +24,26 @@ body footer{
 body header{
     width: 100%;
     background-image: url(https://github.com/user-attachments/assets/1f2095f9-e582-4c3b-9609-0cbda9737a16);
-    padding: 0 2%;
     display: flex;
 }
 .title{
-    font-size: 1.8vw;
+    font-size: 3vw;
     margin-top: 0.5vw;
 }
 .menu-group{
-    margin:0.5vw;
+    margin:0vw;
     display: flex;
     list-style: none;
 }
 .menu-item{
     font-size: 1.8vw;
-    margin:0vw 0vw 0vw 7vw;
+    margin:1.1vw 0vw 0vw 9vw;
 }
 body h1{
     color:#188188;
     font-size:3.6vw;
     font-style:italic;
-    margin:0px 0px 0px 50px;/*左75px*/
+    margin:15px 0px 0px 50px;/*左75px*/
 }
 body p{
     margin: 0px 0px 0px 80px;
