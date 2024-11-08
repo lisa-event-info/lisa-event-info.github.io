@@ -23,7 +23,7 @@ body header{
     background-image: url(https://github.com/user-attachments/assets/1f2095f9-e582-4c3b-9609-0cbda9737a16);
     display: flex;
 }
-.title{
+/*.title{
     font-size: 4vw;
     margin-top: 7px;
 }
@@ -35,7 +35,7 @@ body header{
 .menu-item{
     font-size: 3vw;
     margin-left:24px;
-}
+}*/
 body h1{
     color:#3b7960;
     font-size:7.5vw;
