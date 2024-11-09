@@ -11,7 +11,11 @@
     
 </header>
 <body>
-    <h2>LiSA校のイベント情報を発信しています</h2>
+    <footer>
+        <a href="index.html" class="BackPage">戻る</a>
+    </footer>
+
+    <h1>LiSA校のイベント情報を発信しています</h1>
     <ul class="spreadsheets">
         <li id="load-base"><u id="load-text"></u></li>
         <li class="spreadsheets--item js-base"> <!-- この後ループするから何か入れるならこの前に -->        
@@ -22,7 +26,7 @@
                 const baseHtml = document.querySelector('.spreadsheets--item.js-base');
                 const spreadsheets = document.querySelector('.spreadsheets');
 
-                document.getElementById('load-text').textContent = "読み込み中...";
+                document.getElementById('load-text').textContent = "Now Loading...";
 
                 const apiURL = "https://script.google.com/macros/s/AKfycbwj_2jYFAV0NJCd24M-WzDuC1yJL1o9T6rHmPZJqPaxzBurIWITFjAjp15s7V24Zd6yZg/exec";
 
@@ -58,8 +62,5 @@
             </script> <!-- jsここまで -->
         </li>
     </ul>
-    <footer>
-        <h5><a href="index.html">戻る</a></h5>
-    </footer>
 </body>
 </html>
