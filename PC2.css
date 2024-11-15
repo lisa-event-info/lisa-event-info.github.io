@@ -77,7 +77,11 @@ body h4 {
 /*body h5{
 
 }*/
-.List{
+.List/*旧li{}*/{
+    font-size:1.753vw;
+    margin:10px 0px/*上下のみ10px*/
+}
+li{
     font-size:1.753vw;
     margin:10px 0px/*上下のみ10px*/
 }
