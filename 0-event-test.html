@@ -43,7 +43,7 @@
                         copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
 
                         // もしキーワードがある場合、その詳細に飛ぶURLを載せる
-                        if(entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML += " <a href='explanation.html?keyword=" + entry.keyword + "'>詳細</a>";
+                        if(entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML += " <a href='0-explanation-test.html?keyword=" + entry.keyword + "'>詳細</a>";
 
                         if(entry.time != ''){
                             spreadsheets.appendChild(copy);
@@ -54,7 +54,7 @@
                 }
                 loadData();
 
-                // 「読み込み中...」を消す関数
+                // 「Now Loading...」を消す関数
                 function loadTextDisplay(){
                     document.getElementById('load-text').textContent = "";
                     document.getElementById('load-base').style.display = "none";
