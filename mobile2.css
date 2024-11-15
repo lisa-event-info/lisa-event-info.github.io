@@ -2,76 +2,91 @@
 body {
     color: black;
     background-image: url(https://github.com/user-attachments/assets/9743cc47-df68-4be3-a4af-51d3abd643bb);
-    font-size:2.5vw;
-    line-height:1.4;
-    font-family:monospace;
-    font-style:normal;
-    font-weight:normal;
-    text-align:left;
-    text-decoration:none;
-    letter-spacing:normal;
-    margin:4.5vw;
+    font-size: 2.5vw;
+    line-height: 1.4;
+    font-family: monospace;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: normal;
+    margin: 4.5vw;
 }
-body footer{
-    position:absolute;
+
+body footer {
+    position: absolute;
     top: 2vw;
     left: 12vw;
 }
-body header{
+
+body header {
     width: 100%;
     display: flex;
 }
-body h1{
-    color:#3b7960;
-    font-size:7.5vw;
-    font-style:italic;
-    margin:0px;
+
+body h1 {
+    color: #3b7960;
+    font-size: 7.5vw;
+    font-style: italic;
+    margin: 0px;
 }
-body p{
-    margin:0px;
+
+body p {
+    margin: 0px;
 }
+
 body h2 {
     color: #3b7960;
     font-size: 8vw;
     font-style: italic;
     margin: 15vw 0vw 0vw 0vw;
 }
-body h3{
+
+body h3 {
     color: #333631;
     font-size: 3vw;
     font-weight: 100;
 }
-body h4{
-    font-size:3.3vw;
-    margin:0px;
+
+body h4 {
+    font-size: 3.3vw;
+    margin: 0px;
 }
-body h5{
-    font-size:3.5vw;
-    margin-right:70px;
+
+body h5 {
+    font-size: 3.5vw;
+    margin-right: 70px;
 }
-body li{
-    font-size:3.506vw;
-    margin:10px 0px 10px 0px/*上下のみ10px*/
+
+body li {
+    font-size: 3.506vw;
+    margin: 10px 0px 10px 0px
+        /*上下のみ10px*/
 }
-body s{
-    color:gray;/*取り消し線の色*/
+
+body s {
+    color: gray;
+    /*取り消し線の色*/
 }
-.js-base{
+
+.js-base {
     display: none;
-} 
+}
 
 
 /* サイドメニューの初期スタイル */
 .menu {
     position: fixed;
     top: 0;
-    left: -300px; /* メニューを画面の左側に隠す */
+    left: -300px;
+    /* メニューを画面の左側に隠す */
     width: 250px;
     height: 100%;
     background-color: #333;
     color: #fff;
     overflow-y: auto;
-    transition: left 0.3s ease; /* アニメーション */
+    transition: left 0.3s ease;
+    /* アニメーション */
     padding: 20px;
 }
 
@@ -99,5 +114,18 @@ body s{
 
 /* メニューが表示されているときのスタイル */
 .menu.active {
-    left: 0; /* メニューを画面内に表示 */
+    left: 0;
+    /* メニューを画面内に表示 */
+}
+
+.title {
+    display: none;
+}
+
+.menu-group {
+    display: none;
+}
+
+.menu-item {
+    display: none;
 }

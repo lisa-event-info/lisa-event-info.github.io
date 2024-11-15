@@ -13,33 +13,43 @@ body {
     letter-spacing: normal;
     margin: 100px;
 }
+
 /*body span{
     background-color: #89c997; #f7b977 or #89c997
 }*/
-body footer{
-    position:absolute;
+body footer {
+    position: absolute;
     bottom: 10vw;
     right: 10vw;
 }
-body header{
+
+body header {
     width: 100%;
     background-image: url(https://github.com/user-attachments/assets/1f2095f9-e582-4c3b-9609-0cbda9737a16);
     display: flex;
 }
-.title{
-    font-size:1.8vw;
-    margin-top:0.5vw;
+
+.title {
+    font-size: 1.8vw;
+    margin-top: 0.5vw;
 }
-.menu-group{
-    margin:0.5vw;
-    display:flex;
-    list-style:none;
-    overflow:hidden;
+
+.menu-group {
+    margin: 0.5vw;
+    display: flex;
+    list-style: none;
+    overflow: hidden;
 }
-.menu-item{
-    font-size:1.8vw;
-    margin:0vw 0vw 0vw 7vw;
+
+.menu-item {
+    font-size: 1.8vw;
+    margin: 0vw 0vw 0vw 7vw;
 }
+
+.menu {
+    display: none;
+}
+
 /*.title{
     margin: 0.5vw 0vw 0vw 0vw;
     font-size: 3vw;
@@ -55,20 +65,24 @@ body header{
     align-items: center;
     display: inline-block;
 }*/
-.BackPage{
-    font-size:1.5vw;
+.BackPage {
+    font-size: 1.5vw;
     margin-right: 70px;
     text-align: right;
 }
-.MainTitle{
+
+.MainTitle {
     margin: 0px 0px 0px 80px;
 }
-body h1{
-    color:#188188;
-    font-size:3.6vw;
-    font-style:italic;
-    margin:15px 0px 0px 50px;/*左75px*/
+
+body h1 {
+    color: #188188;
+    font-size: 3.6vw;
+    font-style: italic;
+    margin: 15px 0px 0px 50px;
+    /*左75px*/
 }
+
 /*body p{
 
 }
@@ -79,36 +93,50 @@ body h2{
     margin:0px 0px 0px 50px; 左75px
 }*/
 body h3 {
-    color:#333631;
-    font-size:2.27vw;/*元35px*/
-    font-weight:100;
+    color: #333631;
+    font-size: 2.27vw;
+    /*元35px*/
+    font-weight: 100;
 }
+
 body h4 {
     font-size: 2vw;
     font-style: italic;
-    margin:-1.5vw 0vw 0vw 16vw/*左75px*/
+    margin: -1.5vw 0vw 0vw 16vw
+        /*左75px*/
 }
+
 /*body h5{
 
 }*/
-.List/*旧li{}*/{
-    font-size:1.753vw;
-    margin:10px 0px/*上下のみ10px*/
-}
-li{
-    font-size:1.753vw;
-    margin:10px 0px/*上下のみ10px*/
-}
-body s{
-    color: gray;/*取り消し線の字の色*/
-}
-.js-base{
-    display: none;
-} 
+.List
 
-#menuButton{
+/*旧li{}*/
+    {
+    font-size: 1.753vw;
+    margin: 10px 0px
+        /*上下のみ10px*/
+}
+
+li {
+    font-size: 1.753vw;
+    margin: 10px 0px
+        /*上下のみ10px*/
+}
+
+body s {
+    color: gray;
+    /*取り消し線の字の色*/
+}
+
+.js-base {
     display: none;
 }
-.menu{
-    margin:0px;
+
+#menuButton {
+    display: none;
+}
+
+.menu {
+    margin: 0px;
 }
