@@ -27,7 +27,7 @@ body header{
     display: flex;
 }
 .title{
-    margin-top: 0.5vw;
+    margin: 0.5vw 0vw 0vw 0vw;
     font-size: 3vw;
 }
 .menu-group{
