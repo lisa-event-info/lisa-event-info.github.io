@@ -28,7 +28,7 @@
 
                 document.getElementById('load-text').textContent = "Now Loading...";
 
-                const apiURL = "https://script.google.com/macros/s/AKfycbw2IWIWTZzmx6f9pylsIlTz5M5-Jlau-Xv5iHn4M2sGupsJwkgyCy0sgUmQWZhewGKI/exec";
+                const apiURL = "https://script.google.com/macros/s/AKfycbxCmIpqpp_q2ZcYePgy4WtjoUy063HWNe0EIx2uEMaIB-hgNtZ84jIXcK4c-y6vHr3T/exec";
 
                 async function loadData() {
                     // apiURLのデータをjson化
@@ -43,7 +43,7 @@
                         copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
 
                         // もしキーワードがある場合、その詳細に飛ぶURLを載せる
-                        if(entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML += " <a href='0-explanation-test.html?keyword=" + entry.keyword + "'>詳細</a>";
+                        if(entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML += " <a href='0-explanation-test.html?keyword=" + entry.keyword + "'>詳しく</a>";
 
                         if(entry.time != ''){
                             spreadsheets.appendChild(copy);
