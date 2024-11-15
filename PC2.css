@@ -27,6 +27,19 @@ body header{
     display: flex;
 }
 .title{
+    font-size:1.8vw;
+    margin-top:0.5vw;
+}
+.menu-group{
+    margin:0.5vw;
+    display:flex;
+    list-style:none;
+    overflow:hidden;
+}
+.menu-item{
+    font-size:1.8vw;
+    margin:0vw 0vw 0vw 7vw;
+/*.title{
     margin: 0.5vw 0vw 0vw 0vw;
     font-size: 3vw;
 }
@@ -39,8 +52,8 @@ body header{
     margin-left:9vw;
     font-size: 1.8vw;
     align-items: center;
-    /*display: inline-block;*/
-}
+    display: inline-block;
+}*/
 .BackPage{
     font-size:1.5vw;
     margin-right: 70px;
