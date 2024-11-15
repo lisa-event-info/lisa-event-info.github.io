@@ -39,7 +39,7 @@ body header{
     margin-left:9vw;
     font-size: 1.8vw;
     align-items: center;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 .BackPage{
     font-size:1.5vw;
