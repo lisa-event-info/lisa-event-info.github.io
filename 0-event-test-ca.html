@@ -131,7 +131,7 @@
 
         const apiURL = "https://script.google.com/macros/s/AKfycbwj_2jYFAV0NJCd24M-WzDuC1yJL1o9T6rHmPZJqPaxzBurIWITFjAjp15s7V24Zd6yZg/exec";
         let currentYear = 2024;
-        let currentMonth = 11;
+        let currentMonth = new Date().getMonth() + 1;
         let eventsData = [];
 
         // JSONファイルを読み込み、データを取得する関数
