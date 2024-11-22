@@ -66,6 +66,10 @@ body footer{
     display: none;
 }
 
+header {
+    display: none;
+}
+
 .menu {
     margin: 0px;
 }
