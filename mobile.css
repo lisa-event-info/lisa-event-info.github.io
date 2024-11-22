@@ -14,10 +14,7 @@ body {
     margin:4.5vw;
 }
 body footer{
-    position:absolute;
-    bottom: 30vw;
-    right: 12vw;
-    font-size: 4vw;
+    display: none;
 }
 /*body header{
     position:absolute;
