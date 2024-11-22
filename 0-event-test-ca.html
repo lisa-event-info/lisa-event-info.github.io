@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="PC2.css" rel="stylesheet" type="text/css" media="(min-width:801px)" />
+    <link href="mobile2.css" rel="stylesheet" type="text/css" media="(max-width:800px)" />
+    <title>イベント情報</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #f2f2f2;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #e9e9e9;
+        }
+
+        .event {
+            background-color: #ffd700;
+        }
+
+        .calendar-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .event-item {
+            font-size: 0.9em;
+            margin-top: 5px;
+            padding: 2px;
+            background-color: #ffeeba;
+            border: 1px solid #ffd966;
+            border-radius: 3px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="menuButton">≡</button>
+    <header>
+        <div id="sideMenu" class="menu">
+            <h1>Test2</h1>
+            <ul>
+                <li><a href="0-index-test.html">ホーム</a></li>
+                <li><a href="0-event-test.html">イベント情報</a></li>
+                <li><a href="0-form-test.html">情報提供はこちら</a></li>
+            </ul>
+        </div>
+        <script>
+            const menuButton = document.getElementById('menuButton');
+            const sideMenu = document.getElementById('sideMenu');
+
+            // メニューボタンがクリックされたときの処理
+            menuButton.addEventListener('click', (event) => {
+                event.stopPropagation(); // イベントのバブリングを防ぐ
+                sideMenu.classList.toggle('active'); // メニューを開閉
+            });
+
+            // ドキュメント全体のクリックイベント
+            document.addEventListener('click', (event) => {
+                // メニューが開かれていて、クリック先がメニュー外の場合にメニューを閉じる
+                if (sideMenu.classList.contains('active') && !sideMenu.contains(event.target)) {
+                    sideMenu.classList.remove('active');
+                }
+            });
+        </script>
+        <h1 class="title">Test2</h1>
+        <ul class="menu-group">
+            <li class="menu-item"><a href="0-index-test.html">ホーム</a></li>
+            <li class="menu-item"><a href="0-event-test.html">イベント情報</a></li>
+            <li class="menu-item"><a href="0-form-test.html">情報提供はこちら</a></li>
+        </ul>
+    </header>
+
+    <h1>LiSA校のイベント情報を発信しています</h1>
+
+    <br>
+
+    <div class="calendar-controls">
+        <button onclick="prevMonth()">前の月へ</button>
+        <span id="month-year"></span>
+        <button onclick="nextMonth()">次の月へ</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>日</th>
+                <th>月</th>
+                <th>火</th>
+                <th>水</th>
+                <th>木</th>
+                <th>金</th>
+                <th>土</th>
+            </tr>
+        </thead>
+        <tbody id="calendar-body">
+            <!-- JavaScriptで日付を生成 -->
+        </tbody>
+    </table>
+
+    <ul class="spreadsheets">
+        <li id="load-base"><u id="load-text"></u></li>
+        <li class="spreadsheets--item js-base">
+            <section>
+                <u class="spreadsheets--content"></u>
+            </section>
+        </li>
+    </ul>
+
+    <script>
+        const baseHtml = document.querySelector('.spreadsheets--item.js-base');
+        const spreadsheets = document.querySelector('.spreadsheets');
+
+        document.getElementById('load-text').textContent = "Now Loading...";
+
+        const apiURL = "https://script.google.com/macros/s/AKfycbwj_2jYFAV0NJCd24M-WzDuC1yJL1o9T6rHmPZJqPaxzBurIWITFjAjp15s7V24Zd6yZg/exec";
+        let currentYear = 2024;
+        let currentMonth = 11;
+        let eventsData = [];
+
+        // JSONファイルを読み込み、データを取得する関数
+        async function loadJsonData() {
+            const response = await fetch(apiURL);
+            eventsData = await response.json();
+
+            // 期間ありのイベント一覧の表示
+            eventsData.forEach(entry => {
+                const copy = baseHtml.cloneNode(true);
+                copy.classList.remove('js-base');
+
+                // 〜が含まれているか
+                if (entry.time.includes('〜')) {
+                    copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
+
+                    // もしキーワードがある場合、その詳細に飛ぶURLを載せる
+                    if (entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content + " <a href='explanation.html?keyword=" + entry.keyword + "'>詳細</a>";
+
+                    if (entry.time != '') {
+                        spreadsheets.appendChild(copy);
+                    }
+                }
+
+                loadTextDisplay();
+            });
+
+            loadData();
+        }
+
+        // カレンダーを生成する関数
+        function generateCalendar(year, month, events = []) {
+            const calendarBody = document.getElementById('calendar-body');
+            calendarBody.innerHTML = '';
+
+            const monthYearDisplay = document.getElementById('month-year');
+            monthYearDisplay.textContent = `${year}年 ${month}月`;
+
+            const firstDay = new Date(year, month - 1, 1).getDay();
+            const daysInMonth = new Date(year, month, 0).getDate();
+
+            let date = 1;
+            for (let i = 0; i < 6; i++) {
+                const row = document.createElement('tr');
+
+                for (let j = 0; j < 7; j++) {
+                    const cell = document.createElement('td');
+                    if (i === 0 && j < firstDay) {
+                        cell.textContent = '';
+                    } else if (date > daysInMonth) {
+                        cell.textContent = '';
+                    } else {
+                        cell.innerHTML = `<strong>${date}</strong>`;
+
+                        // 該当する日付の全イベントを取得
+                        const eventsForDate = events.filter(event => {
+                            const [eventYear, eventMonth, eventDay] = event.time.split('/').map(Number);
+                            return eventYear === year && eventMonth === month && eventDay === date;
+                        });
+
+                        // 各イベントを1行ずつ追加
+                        eventsForDate.forEach(event => {
+                            const eventContent = document.createElement('div');
+                            eventContent.classList.add('event-item'); // スタイリング用のクラスを追加
+
+                            // event.keyword が存在する場合はリンクを作成
+                            if (event.keyword) {
+                                eventContent.innerHTML = `<a href="https://lisa-event-info.github.io/explanation.html?keyword=${event.keyword}" target="_blank">${event.content}</a>`;
+                            } else {
+                                eventContent.textContent = event.content;
+                            }
+
+                            cell.appendChild(eventContent);
+                        });
+
+                        // 今日のセルを黄色にする
+                        if ((new Date().getMonth() + 1) == month && new Date().getDate() == date) {
+                            cell.style.backgroundColor = "#ffd700";
+                        }
+
+                        date++;
+                    }
+                    row.appendChild(cell);
+                }
+
+                calendarBody.appendChild(row);
+                if (date > daysInMonth) break;
+            }
+        }
+
+
+        // 前の月に移動
+        function prevMonth() {
+            currentMonth--;
+            if (currentMonth < 1) {
+                currentMonth = 12;
+                currentYear--;
+            }
+            loadData();
+        }
+
+        // 次の月に移動
+        function nextMonth() {
+            currentMonth++;
+            if (currentMonth > 12) {
+                currentMonth = 1;
+                currentYear++;
+            }
+            loadData();
+        }
+
+        // データをカレンダーに反映し、イベントリストを作成
+        function loadData() {
+            generateCalendar(currentYear, currentMonth, eventsData);
+
+            loadTextDisplay();
+        }
+
+        // 「読み込み中...」を消す関数
+        function loadTextDisplay() {
+            document.getElementById('load-text').textContent = "";
+            document.getElementById('load-base').style.display = "none";
+        }
+
+        // 初期表示
+        loadJsonData();
+    </script>
+</body>
+
+</html>
