@@ -15,8 +15,8 @@ body {
 }
 body footer{
     position:absolute;
-    top: 2vw;
-    left: 12vw;
+    bottom: 30vw;
+    right: 12vw;
 }
 /*body header{
     position:absolute;
