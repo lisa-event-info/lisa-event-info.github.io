@@ -13,24 +13,13 @@ body {
     letter-spacing:normal;
     margin:4.5vw;
 }
-body footer{
-    display: none;
-}
-/*body header{
-    position:absolute;
-    bottom:10vw;
-    right:10vw;
-}*/
 body h1{
     color:#3b7960;
     font-size:7.5vw;
     font-style:italic;
     margin:0px;
 }
-body p{
-    margin:0px;
-}
-body h2 {
+body h2 {   /*不要？？*/
     color: #3b7960;
     font-size: 8vw;
     font-style: italic;
@@ -45,21 +34,50 @@ body h4{
     font-size:3.3vw;
     margin:0px;
 }
+/*
 body h5{
     font-size:3.5vw;
     margin-right:70px;
 }
+*/
+
+
+/*
+.BackPage{
+    font-size: ;
+    margin-right: ;
+    text-align: ;
+}
+.List{
+    font-size: ;
+    margin: ;
+}
+*/
 body li{
     font-size:3.506vw;
-    margin:10px 0px 10px 0px/*上下のみ10px*/
+    margin:10px 0px 10px 0px;   /*上下のみ10px*/
 }
 body s{
     color:gray;/*取り消し線の色*/
 }
+
+
+body footer{
+    display: none;
+}
+/*body header{
+    position:absolute;
+    bottom:10vw;
+    right:10vw;
+}*/
+
+
 .js-base{
     display: none;
 } 
 
+
+/*以下サイドメニュー*/
 /* サイドメニューの初期スタイル */
 .menu {
     position: fixed;

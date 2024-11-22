@@ -12,18 +12,6 @@ body {
     letter-spacing: normal;
     margin: 4.5vw;
 }
-
-body footer {
-    position: absolute;
-    top: 2vw;
-    left: 12vw;
-}
-
-body header {
-    width: 100%;
-    display: flex;
-}
-
 body h1 {
     color: #3b7960;
     font-size: 7.5vw;
@@ -41,11 +29,13 @@ body h4 {
 }
 
 
+/*
 .BackPage{
     font-size: ;
     margin-right: ;
     text-align: right;
 }
+*/
 .List{
     font-size: 3.506vw;
     margin: 10px 0px 10px 0px;  /*上下のみ10px*/
@@ -59,12 +49,21 @@ body s {
 }
 
 
+body footer {
+    display: none;
+}
+body header {
+    width: 100%;
+    display: flex;
+}
+
 
 .js-base {
     display: none;
 }
 
 
+/*以下サイドメニュー*/
 /* サイドメニューの初期スタイル */
 .menu {
     position: fixed;

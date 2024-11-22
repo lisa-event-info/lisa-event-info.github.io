@@ -42,7 +42,7 @@ body h4 {
     background:#bcddff;
     font-weight:400;
     border:solid 3px #ff8c00;
-    border-radius:12px;
+    border-radius:12px; /*未追加*/
     font-size: 1.5vw;
     margin-right: 70px;
     text-align: right;
@@ -52,13 +52,12 @@ body h4 {
     font-size: 1.753vw;
     margin: 10px 0px;   /*上下のみ10px*/
 }
-body li {
+body li {   /*未追加*/
     font-size: 1.753vw;
     margin: 10px 0px;   /*上下のみ10px*/
 }
-/*取り消し線の字の色*/
 body s {
-    color: gray;
+    color: gray;    /*取り消し線の字の色*/
 }
 
 
@@ -67,50 +66,30 @@ body footer {
     bottom: 10vw;
     right: 10vw;
 }
-
-body header {
+body header {   /*未追加*/
     width: 100%;
     background-image: url(https://github.com/user-attachments/assets/1f2095f9-e582-4c3b-9609-0cbda9737a16);
     display: flex;
 }
 
-.title {
+
+.title {    /*未追加*/
     font-size: 1.8vw;
     margin-top: 0.5vw;
 }
-
 .menu-group {
     margin: 0.5vw;
     display: flex;
     list-style: none;
     overflow: hidden;
 }
-
 .menu-item {
     font-size: 1.8vw;
     margin: 0vw 0vw 0vw 7vw;
 }
-
 .menu {
     display: none;
 }
-
-/*.title{
-    margin: 0.5vw 0vw 0vw 0vw;
-    font-size: 3vw;
-}
-.menu-group{
-    margin:0vw;
-    display: flex;
-    list-style: none;
-}
-.menu-item{
-    margin-left:9vw;
-    font-size: 1.8vw;
-    align-items: center;
-    display: inline-block;
-}*/
-
 
 
 .js-base {
