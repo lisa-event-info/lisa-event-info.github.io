@@ -62,3 +62,59 @@ body s{
 .js-base{
     display: none;
 } 
+
+/* サイドメニューの初期スタイル */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    /* メニューを画面の左側に隠す */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    /* アニメーション */
+    padding: 20px;
+}
+
+.menu h2 {
+    margin-top: 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+/* メニューが表示されているときのスタイル */
+.menu.active {
+    left: 0;
+    /* メニューを画面内に表示 */
+}
+
+.title {
+    display: none;
+}
+
+.menu-group {
+    display: none;
+}
+
+.menu-item {
+    display: none;
+}
