@@ -20,7 +20,7 @@ body h1 {
     margin: 15px 0px 0px 50px;  /*左75px*/
 }
 .MainTitle {
-    margin: 0px 0px 0px 80px;
+    margin: 0px 0px 0px 80px;   /*PC版のみ*/
 }
 body h3 {
     color: #333631;
