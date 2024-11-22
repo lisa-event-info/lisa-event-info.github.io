@@ -35,6 +35,14 @@ body h4 {
 
 
 .BackPage {
+    display:inline-block;
+    padding: 4px 9px 3px 9px;
+    text-decoration:none;
+    color:black;
+    background:#bcddff;
+    font-weight:400;
+    border:solid 3px #ff8c00;
+    border-radius:12px;
     font-size: 1.5vw;
     margin-right: 70px;
     text-align: right;
