@@ -92,9 +92,9 @@
     <br>
 
     <div class="calendar-controls">
-        <button onclick="prevMonth()">前の月へ</button>
+        <button onclick="prevMonth()">前の月へ (<span id="prevCount"></span>)</button>
         <span id="month-year"></span>
-        <button onclick="nextMonth()">次の月へ</button>
+        <button onclick="nextMonth()">次の月へ (<span id="nextCount"></span>)</button>
     </div>
 
     <table>
@@ -133,6 +133,7 @@
         let currentYear = 2024;
         let currentMonth = new Date().getMonth() + 1;
         let eventsData = [];
+        let eventsCount = {};
 
         // JSONファイルを読み込み、データを取得する関数
         async function loadJsonData() {
@@ -143,6 +144,15 @@
             eventsData.forEach(entry => {
                 const copy = baseHtml.cloneNode(true);
                 copy.classList.remove('js-base');
+
+                const [year, month] = entry.time.split("/"); // 日付を分割
+                const yearMonthKey = `${year}/${month}`; // "年/月" の形式を作成
+
+                if (!eventsCount[yearMonthKey]) {
+                    eventsCount[yearMonthKey] = 0;
+                }
+
+                eventsCount[yearMonthKey]++; // イベント個数の追加
 
                 // 〜が含まれているか
                 if (entry.time.includes('～')) {
@@ -246,6 +256,24 @@
         // データをカレンダーに反映し、イベントリストを作成
         function loadData() {
             generateCalendar(currentYear, currentMonth, eventsData);
+
+            // 来月分のイベント個数の表示
+            if (eventsCount[`${currentYear}/0${currentMonth+1}`] == undefined) {
+                eventsCount[`${currentYear}/0${currentMonth+1}`] = 0;
+            }
+            if (eventsCount[`${currentYear}/${currentMonth+1}`] == undefined) {
+                eventsCount[`${currentYear}/${currentMonth+1}`] = 0;
+            }
+            document.getElementById('nextCount').textContent = (currentMonth < 9)?eventsCount[`${currentYear}/0${currentMonth+1}`]:eventsCount[`${currentYear}/${currentMonth+1}`];
+
+            // 先月分のイベント個数の表示
+            if (eventsCount[`${currentYear}/0${currentMonth-1}`] == undefined) {
+                eventsCount[`${currentYear}/0${currentMonth-1}`] = 0;
+            }
+            if (eventsCount[`${currentYear}/${currentMonth-1}`] == undefined) {
+                eventsCount[`${currentYear}/${currentMonth-1}`] = 0;
+            }
+            document.getElementById('prevCount').textContent = (currentMonth < 11)?eventsCount[`${currentYear}/0${currentMonth-1}`]:eventsCount[`${currentYear}/${currentMonth-1}`];
 
             loadTextDisplay();
         }
