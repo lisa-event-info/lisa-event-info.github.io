@@ -19,6 +19,7 @@ body h1{
     margin:0px 0px 0px 50px;
 }
 .MainTitle{
+    display: block;
     margin: 0px 0px 0px 80px;
 }
 body h3 {
