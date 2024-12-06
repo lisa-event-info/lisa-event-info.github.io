@@ -13,34 +13,34 @@
         <a href="0-index-test.html" class="BackPage">戻る</a>
     </footer>
 
-        <div id="sideMenu" class="menu">
-            <h1>LiSA</h1>
-                <ul>
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><a href="event.html">イベント情報</a></li>
-                    <li><a href="form.html">情報提供はこちら</a></li>
-                </ul>
-        </div>
-        <script>
-            const menuButton = document.getElementById('menuButton');
-            const sideMenu = document.getElementById('sideMenu');
+    <button id="menuButton">≡</button>
+    <div id="sideMenu" class="menu">
+        <h1>LiSA</h1>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="event.html">イベント情報</a></li>
+                <li><a href="form.html">情報提供はこちら</a></li>
+            </ul>
+    </div>
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const sideMenu = document.getElementById('sideMenu');
 
-            // メニューボタンがクリックされたときの処理
-            menuButton.addEventListener('click', (event) => {
-                event.stopPropagation(); // イベントのバブリングを防ぐ
-                sideMenu.classList.toggle('active'); // メニューを開閉
-            });
+        // メニューボタンがクリックされたときの処理
+        menuButton.addEventListener('click', (event) => {
+            event.stopPropagation(); // イベントのバブリングを防ぐ
+            sideMenu.classList.toggle('active'); // メニューを開閉
+        });
 
-            // ドキュメント全体のクリックイベント
-            document.addEventListener('click', (event) => {
-                // メニューが開かれていて、クリック先がメニュー外の場合にメニューを閉じる
-                if (sideMenu.classList.contains('active') && !sideMenu.contains(event.target)) {
-                    sideMenu.classList.remove('active');
-                }
-            });
-        </script>
+        // ドキュメント全体のクリックイベント
+        document.addEventListener('click', (event) => {
+            // メニューが開かれていて、クリック先がメニュー外の場合にメニューを閉じる
+            if (sideMenu.classList.contains('active') && !sideMenu.contains(event.target)) {
+                sideMenu.classList.remove('active');
+            }
+        });
+    </script>
     <header>
-        
         <h1 class="title">LiSA</h1>
         <ul class="menu-group">
             <li class="menu-item"><a href="index.html">ホーム</a></li>
