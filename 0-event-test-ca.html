@@ -91,40 +91,64 @@
     </header>
 
     <h1>LiSA校のイベント情報を発信しています</h1>
+    <button id="changeCalender">カレンダー表示にする</button>
 
     <br>
+    <div id="calender-div" style="display : none">
+        <div class="calendar-controls">
+            <button onclick="prevMonth()">前の月へ (<span id="prevCount"></span>)</button>
+            <span id="month-year"></span>
+            <button onclick="nextMonth()">次の月へ (<span id="nextCount"></span>)</button>
+        </div>
 
-    <div class="calendar-controls">
-        <button onclick="prevMonth()">前の月へ (<span id="prevCount"></span>)</button>
-        <span id="month-year"></span>
-        <button onclick="nextMonth()">次の月へ (<span id="nextCount"></span>)</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>日</th>
+                    <th>月</th>
+                    <th>火</th>
+                    <th>水</th>
+                    <th>木</th>
+                    <th>金</th>
+                    <th>土</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body">
+                <!-- JavaScriptで日付を生成 -->
+            </tbody>
+        </table>
     </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>日</th>
-                <th>月</th>
-                <th>火</th>
-                <th>水</th>
-                <th>木</th>
-                <th>金</th>
-                <th>土</th>
-            </tr>
-        </thead>
-        <tbody id="calendar-body">
-            <!-- JavaScriptで日付を生成 -->
-        </tbody>
-    </table>
+    <div id="list-div">
+        <ul class="spreadsheets">
+            <li id="load-base"><u id="load-text"></u></li>
+            <li class="spreadsheets--item js-base">
+                <section>
+                    <u class="spreadsheets--content"></u>
+                </section>
+            </li>
+        </ul>
+    </div>
 
-    <ul class="spreadsheets">
-        <li id="load-base"><u id="load-text"></u></li>
-        <li class="spreadsheets--item js-base">
-            <section>
-                <u class="spreadsheets--content"></u>
-            </section>
-        </li>
-    </ul>
+    <script>
+        const changeCalender = document.getElementById('changeCalender');
+        document.getElementById('calender-div').style.display = "none";
+        document.getElementById('list-div').style.display = "block";
+        isList = true;
+        changeCalender.addEventListener('click', (event) => {
+            if (isList) {
+                changeCalender.textContent = "リスト表示にする";
+                document.getElementById('calender-div').style.display = "block";
+                document.getElementById('list-div').style.display = "none";
+                isList = false;
+            } else {
+                changeCalender.textContent = "カレンダー表示にする";
+                document.getElementById('calender-div').style.display = "none";
+                document.getElementById('list-div').style.display = "block";
+                isList = true;
+            }
+        });
+    </script>
 
     <script>
         const baseHtml = document.querySelector('.spreadsheets--item.js-base');
@@ -143,7 +167,7 @@
             const response = await fetch(apiURL);
             eventsData = await response.json();
 
-            // 期間ありのイベント一覧の表示
+            // イベント一覧の表示
             eventsData.forEach(entry => {
                 const copy = baseHtml.cloneNode(true);
                 copy.classList.remove('js-base');
@@ -157,16 +181,13 @@
 
                 eventsCount[yearMonthKey]++; // イベント個数の追加
 
-                // 〜が含まれているか
-                if (entry.time.includes('～')) {
-                    copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
+                copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
 
-                    // もしキーワードがある場合、その詳細に飛ぶURLを載せる
-                    if (entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content + " <a href='explanation.html?keyword=" + entry.keyword + "'>詳細</a>";
+                // もしキーワードがある場合、その詳細に飛ぶURLを載せる
+                if (entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content + " <a href='explanation.html?keyword=" + entry.keyword + "'>詳細</a>";
 
-                    if (entry.time != '') {
-                        spreadsheets.appendChild(copy);
-                    }
+                if (entry.time != '') {
+                    spreadsheets.appendChild(copy);
                 }
 
                 loadTextDisplay();
