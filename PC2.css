@@ -53,10 +53,10 @@ body h4 {
     font-size: 1.753vw;
     margin: 10px 0px;   /*上下のみ10px*/
 }
-.spreadsheets--item{
+/*.spreadsheets--item{
     font-size: 1.753vw;
-    margin: 30px 0px;   /*上下のみ10px*/
-}
+    margin: 30px 0px;   上下のみ10px
+}*/
 body s {
     color: gray;    /*取り消し線の字の色*/
 }
