@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>イベント情報</title>
-    <link href="mobile.css" rel="stylesheet" type="text/css" media="(max-width:800px)" />
     <link href="PC.css" rel="stylesheet" type="text/css" media="(min-width:801px)" /> 
+    <link href="mobile.css" rel="stylesheet" type="text/css" media="(max-width:800px)" />
+    <link rel="icon" href="https://github.com/user-attachments/assets/442268bd-673d-4014-b6ef-95f7aea72275">
 </head>
 
 <body>
@@ -14,33 +15,33 @@
     </footer>
     
     <button id="menuButton">≡</button>
-    <header>
-        <div id="sideMenu" class="menu">
-            <h1>LiSA</h1>
-                <ul>
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><a href="event.html">イベント情報</a></li>
-                    <li><a href="form.html">情報提供はこちら</a></li>
-                </ul>
-        </div>
-        <script>
-            const menuButton = document.getElementById('menuButton');
-            const sideMenu = document.getElementById('sideMenu');
+    <div id="sideMenu" class="menu">
+        <h1>LiSA</h1>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="event.html">イベント情報</a></li>
+                <li><a href="form.html">情報提供はこちら</a></li>
+            </ul>
+    </div>
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const sideMenu = document.getElementById('sideMenu');
 
-            // メニューボタンがクリックされたときの処理
-            menuButton.addEventListener('click', (event) => {
-                event.stopPropagation(); // イベントのバブリングを防ぐ
-                sideMenu.classList.toggle('active'); // メニューを開閉
-            });
+        // メニューボタンがクリックされたときの処理
+        menuButton.addEventListener('click', (event) => {
+            event.stopPropagation(); // イベントのバブリングを防ぐ
+            sideMenu.classList.toggle('active'); // メニューを開閉
+        });
 
-            // ドキュメント全体のクリックイベント
-            document.addEventListener('click', (event) => {
-                // メニューが開かれていて、クリック先がメニュー外の場合にメニューを閉じる
-                if (sideMenu.classList.contains('active') && !sideMenu.contains(event.target)) {
-                    sideMenu.classList.remove('active');
-                }
-            });
-        </script>
+        // ドキュメント全体のクリックイベント
+        document.addEventListener('click', (event) => {
+            // メニューが開かれていて、クリック先がメニュー外の場合にメニューを閉じる
+            if (sideMenu.classList.contains('active') && !sideMenu.contains(event.target)) {
+                sideMenu.classList.remove('active');
+            }
+        });
+    </script>
+    <header><!--ヘッダー、PCに表示-->
         <h1 class="title">LiSA</h1>
         <ul class="menu-group">
             <li class="menu-item"><a href="index.html">ホーム</a></li>

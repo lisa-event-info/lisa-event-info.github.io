@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(Test Ver)LiSA校イベント情報共有サイト</title>
-    <link href="mobile2.css" rel="stylesheet" type="text/css" media="(max-width:800px)" />
     <link href="PC2.css" rel="stylesheet" type="text/css" media="(min-width:801px)" />
-    <link rel="icon" href="https://github.com/user-attachments/assets/fedadbcb-26de-418c-b65e-099af986e382">
+    <link href="mobile2.css" rel="stylesheet" type="text/css" media="(max-width:800px)" />
+    <link rel="icon" href="https://github.com/user-attachments/assets/442268bd-673d-4014-b6ef-95f7aea72275">
 </head>
 <body>
-    <button id="menuButton">≡</button>
+    <button id="menuButton">≡</button><!--サイドメニュー、モバイルに表示-->
     <div id="sideMenu" class="menu">
         <h1>LiSA</h1>
             <ul>
@@ -36,7 +36,8 @@
             }
         });
     </script>
-    <header>
+    <header><!--ヘッダー、PCに表示-->
+        <img src="https://github.com/user-attachments/assets/442268bd-673d-4014-b6ef-95f7aea72275" width="3.5%" height="3.5%">
         <h1 class="title">LiSA</h1>
         <ul class="menu-group">
             <li class="menu-item"><a href="0-index-test.html">ホーム</a></li>
@@ -59,18 +60,7 @@
         <a href="https://forms.gle/QENGR2PL8zRqo34d7" target="_blank" class="List">https://forms.gle/QENGR2PL8zRqo34d7</a>
     </ul>
     <br><br><br><br>
-    <style media="(max-width:800px)">
-        .update{
-            font-size: 1.4em;
-            color: dimgray;
-        }
-    </style>
-    <style media="(min-width:801px)">
-        .update{
-            font-size: 1em;
-            color: dimgray;
-        }
-    </style>
+
     <span class=".update">
         最終更新日：2024/12/11
         <ul>
@@ -78,6 +68,18 @@
             <li>2024/12/11　カレンダー表示、スマホ版フォントサイズ変更</li>
         </ul>
     </span>
+    <style media="(min-width:801px)">/*PC用書式*/
+        .update{
+            font-size: 1em;
+            color: dimgray;
+        }
+    </style>
+    <style media="(max-width:800px)">/*モバイル用書式*/
+        .update{
+            font-size: 1.4em;
+            color: dimgray;
+        }
+    </style>
 
     <a href="https://lisa-event-info.github.io" target="_blank"><div align="right">ー一般向けページー</div></a>
 </body>
