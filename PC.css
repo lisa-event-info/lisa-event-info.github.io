@@ -58,6 +58,14 @@ body footer{
     bottom: 10vw;
     right: 10vw;
 }
+body header{
+    width: 100%;
+    display: flex;
+    background-image: url(https://github.com/user-attachments/assets/1f2095f9-e582-4c3b-9609-0cbda9737a16);
+    position:absolute;
+    top:0px;
+    left:0px;
+}
 
 
 .js-base{
