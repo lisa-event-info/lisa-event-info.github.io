@@ -42,12 +42,15 @@ body h4 {
     overflow-wrap: break-word;
 }
 body li {
-    font-size: 3.506vw;
+    font-size: 5vw;
     margin: 10px 0px 10px 0px;  /*上下のみ10px*/
 }
 body s {
     color: gray;    /*取り消し線の色*/
 }
+/*.spreadsheets--content{
+    font-size: 5vw;
+}*/
 
 
 body footer {
