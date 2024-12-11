@@ -279,7 +279,7 @@
 
                             // event.keyword が存在する場合はリンクを作成
                             if (event.keyword) {
-                                eventContent.innerHTML = `<a href="https://lisa-event-info.github.io/explanation.html?keyword=${event.keyword}" target="_blank">${event.content}</a>`;
+                                eventContent.innerHTML = `<a href="https://lisa-event-info.github.io/explanation.html?keyword=${event.keyword}">${event.content}</a>`;
                             } else {
                                 eventContent.textContent = event.content;
                             }
