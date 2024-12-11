@@ -16,7 +16,7 @@ body h1{
     color:#188188;
     font-size:3.6vw;
     font-style:italic;
-    margin:0px 0px 0px 50px;
+    margin:9.5vw 0px 0px 50px;
 }
 .MainTitle{
     display: block;
@@ -76,18 +76,21 @@ body header{
     left: 8.5vw;
 }*/
 .title {
-    font-size: 1.8vw;
-    margin-top: 0.5vw;
+    font-size: 2.3vw;
+    margin-top: 3vw;
+    margin-left: 9vw;
 }
 .menu-group {
-    margin: 0.5vw;
+    margin: 3vw;
     display: flex;
     list-style: none;
     overflow: hidden;
+    position: relative;
+    left: 3vw;
 }
 .menu-item {
     font-size: 1.8vw;
-    margin: 0vw 0vw 0vw 7vw;
+    margin: 0vw 0vw 0vw 9vw;
 }
 .menu {
     display: none;
