@@ -41,6 +41,10 @@ body h4 {
     margin: 10px 0px 10px 0px;  /*上下のみ10px*/
     overflow-wrap: break-word;
 }
+.spreadsheets--item{
+    font-size: 1.753vw;
+    margin: 50px 0px;
+}
 body li {
     font-size: 5vw;
     margin: 10px 0px 10px 0px;  /*上下のみ10px*/
