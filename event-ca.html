@@ -337,6 +337,7 @@
                 eventsCount[`${currentYear}/${currentMonth+1}`] = 0;
             }
             document.getElementById('nextCount').textContent = (currentMonth < 9)?eventsCount[`${currentYear}/0${currentMonth+1}`]:eventsCount[`${currentYear}/${currentMonth+1}`];
+            if (currentMonth == 12) document.getElementById('nextCount').textContent = eventsCount[`${currentYear+1}/01`];
 
             // 先月分のイベント個数の表示
             if (eventsCount[`${currentYear}/0${currentMonth-1}`] == undefined) {
@@ -348,7 +349,6 @@
             document.getElementById('prevCount').textContent = (currentMonth < 11)?eventsCount[`${currentYear}/0${currentMonth-1}`]:eventsCount[`${currentYear}/${currentMonth-1}`];
             
             if (currentMonth == 1) document.getElementById('prevCount').textContent = eventsCount[`${currentYear-1}/12`];
-            if (currentMonth == 12) document.getElementById('prevCount').textContent = eventsCount[`${currentYear+1}/01`];
 
             loadTextDisplay();
         }
