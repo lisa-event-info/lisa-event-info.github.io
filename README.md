@@ -20,4 +20,4 @@ pタグはmobile.cssで無効化されている。
 ・レイヤー制御
 ・文字の後ろに白背景追加
 ・ヘッダーの幅を調整
-・「詳細」を押したときにexplanationに飛んでしまう。0-explanation-testに飛ぶようにしたい。
+・0-event-testで「詳細」を押したときにexplanationに飛んでしまう。0-explanation-testに飛ぶようにしたい。
