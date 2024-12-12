@@ -16,6 +16,8 @@ pタグはmobile.cssで無効化されている。
 
 ★次開いたときにやること
 ・スマホ版marginの調整
+・mobile.cssに.MainTitleタグを追加
 ・レイヤー制御
 ・文字の後ろに白背景追加
 ・ヘッダーの幅を調整
+・「詳細」を押したときにexplanationに飛んでしまう。0-explanation-testに飛ぶようにしたい。
