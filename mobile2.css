@@ -43,7 +43,7 @@ body h4 {
 }
 .spreadsheets--item{
     font-size: 5vw;
-    margin: 50px 0px;
+    margin: 25px 0px;
 }
 body li {
     font-size: 5vw;
@@ -53,6 +53,9 @@ body s {
     color: gray;    /*取り消し線の色*/
 }
 body img{
+    display: none;
+}
+body p{
     display: none;
 }
 
