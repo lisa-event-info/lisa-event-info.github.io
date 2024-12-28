@@ -233,7 +233,7 @@
                     copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
 
                     // もしキーワードがある場合、その詳細に飛ぶURLを載せる
-                    if (entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content + " <a href='explanation.html?keyword=" + entry.keyword + "'>詳細</a>";
+                    if (entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content + " <a href='0-explanation-test.html?keyword=" + entry.keyword + "'>詳細</a>";
 
                     if (entry.time != '') {
                         spreadsheets.appendChild(copy);
