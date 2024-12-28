@@ -100,7 +100,7 @@ body img{
     margin-left: 9vw;
 }
 .menu-group {
-    margin: 3vw;
+    margin-top: 3vw;
     display: flex;
     list-style: none;
     overflow: hidden;
