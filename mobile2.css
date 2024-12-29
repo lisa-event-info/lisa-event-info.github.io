@@ -16,8 +16,10 @@ body h1 {
     color: #3b7960;
     font-size: 7.8vw;
     font-style: italic;
-    text-decoration: underline;
     margin: 0px;
+}
+.home{
+    text-decoration: underline;
 }
 .MainTitle{
     display: inline;
@@ -87,43 +89,34 @@ body header {
     /* アニメーション */
     padding: 20px;
 }
-
 .menu h2 {
     margin-top: 0;
 }
-
 .menu ul {
     list-style: none;
     padding: 0;
 }
-
 .menu li {
     margin: 15px 0;
 }
-
 .menu li a {
     color: white;
     text-decoration: none;
 }
-
 .menu li a:hover {
     text-decoration: underline;
 }
-
 /* メニューが表示されているときのスタイル */
 .menu.active {
     left: 0;
     /* メニューを画面内に表示 */
 }
-
 .title {
     display: none;
 }
-
 .menu-group {
     display: none;
 }
-
 .menu-item {
     display: none;
 }

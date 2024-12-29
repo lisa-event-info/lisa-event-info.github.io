@@ -17,8 +17,10 @@ body h1 {
     color: #188188;
     font-size: 3.6vw;
     font-style: italic;
-    text-decoration: underline;
     margin: 9.5vw 0px 0px 50px;  /*左75px*/
+}
+.home{
+    text-decoration: underline;
 }
 .MainTitle {
     display: block;
