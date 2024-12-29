@@ -17,10 +17,12 @@ body h1 {
     color: #188188;
     font-size: 3.6vw;
     font-style: italic;
+    text-decoration: underline;
     margin: 9.5vw 0px 0px 50px;  /*左75px*/
 }
 .MainTitle {
     display: block;
+    text-decoration: underline;
     margin: 0px 0px 0px 80px;   /*PC版のみ*/
 }
 body h3 {
@@ -126,8 +128,4 @@ body img{
 
 header {
     display: none;
-}
-
-.menu {
-    margin: 0px;
 }
