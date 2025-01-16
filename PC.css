@@ -10,46 +10,37 @@ body {
     text-align: left;
     text-decoration: none;
     letter-spacing: normal;
-    margin: 100px;
-}
+    margin: 100px;}
 body h1{
     color:#188188;
     font-size:3.6vw;
     font-style:italic;
-    margin:9.5vw 0px 0px 50px;
-}
+    margin:9.5vw 0px 0px 50px;}
 .MainTitle{
     display: block;
-    margin: 0px 0px 0px 80px;
-}
+    margin: 0px 0px 0px 80px;}
 body h3 {
     color:#333631;
     font-size:2.27vw;
-    font-weight:100;
-}
+    font-weight:100;}
 body h4 {
     font-size: 2vw;
     font-style: italic;
-    margin:-1.5vw 0vw 0vw 16vw;
-}
+    margin:-1.5vw 0vw 0vw 16vw;}
 
 
 .BackPage{
     font-size:1.5vw;
     margin-right: 70px;
-    text-align: right;
-}
+    text-align: right;}
 .List{
     font-size:1.753vw;
-    margin:10px 0px;
-}
+    margin:10px 0px;}
 li{
     font-size: 1.753vw;
-    margin: 30px 0px;
-}
+    margin: 30px 0px;}
 body s{
-    color: gray;
-}
+    color: gray;}
 
 
 /*戻るボタン*/
@@ -57,8 +48,7 @@ body footer{
     position:absolute;
     position:fixed;
     bottom: 10vw;
-    right: 10vw;
-}
+    right: 10vw;}
 
 
 /*ヘッダー*/
@@ -68,47 +58,37 @@ body header{
     background-image: url(https://github.com/user-attachments/assets/1f2095f9-e582-4c3b-9609-0cbda9737a16);
     position:absolute;
     top:0px;
-    left:0px;
-}
+    left:0px;}
 /*未実装　body img{
     position: relative;
     top: 2.8vw;
-    left: 8.5vw;
-}*/
+    left: 8.5vw;}*/
 .title {
     font-size: 2.3vw;
     margin-top: 3vw;
-    margin-left: 9vw;
-}
+    margin-left: 9vw;}
 .menu-group {
     margin: 3vw;
     display: flex;
     list-style: none;
     overflow: hidden;
     position: relative;
-    left: 3vw;
-}
+    left: 3vw;}
 .menu-item {
     font-size: 1.8vw;
-    margin: 0vw 0vw 0vw 9vw;
-}
+    margin: 0vw 0vw 0vw 9vw;}
 .menu {
-    display: none;
-}
+    display: none;}
 
 
 .js-base{
-    display: none;
-} 
+    display: none;}
 
 #menuButton {
-    display: none;
-}
+    display: none;}
 
 header {
-    display: none;
-}
+    display: none;}
 
 .menu {
-    margin: 0px;
-}
+    margin: 0px;}

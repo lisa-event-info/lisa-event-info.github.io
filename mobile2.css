@@ -10,67 +10,52 @@ body {
     text-align: left;
     text-decoration: none;
     letter-spacing: normal;
-    margin: 4.5vw;
-}
+    margin: 4.5vw;}
 body h1 {
     color: #3b7960;
     font-size: 7.8vw;
     font-style: italic;
-    margin: 0px;
-}
+    margin: 0px;}
 .home{
-    text-decoration: underline;
-}
+    text-decoration: underline;}
 .MainTitle{
     display: inline;
-    text-decoration: underline;
-}
+    text-decoration: underline;}
 body h3 {
     color: #333631;
     font-size: 5vw;
-    font-weight: 100;
-}
+    font-weight: 100;}
 body h4 {
     font-size: 4vw;
-    margin: 0px;
-}
+    margin: 0px;}
 
 
 .BackPage{
-    display: none;
-}
+    display: none;}
 .List{
     font-size: 5vw;
     margin: 10px 0px 10px 0px;  /*上下のみ10px*/
-    overflow-wrap: break-word;
-}
+    overflow-wrap: break-word;}
 .spreadsheets--item{
     font-size: 5vw;
-    margin: 25px 0px;
-}
+    margin: 25px 0px;}
 body li {
     font-size: 5vw;
-    margin: 10px 0px 10px 0px;  /*上下のみ10px*/
-}
+    margin: 10px 0px 10px 0px;  /*上下のみ10px*/}
 body s {
-    color: gray;    /*取り消し線の色*/
-}
+    color: gray;    /*取り消し線の色*/}
 body img{
-    display: none;
-}
+    display: none;}
 
 
 body footer {
-    display: none;
-}
+    display: none;}
 body header {
-    display: none;
-}
+    display: none;}
 
 
 .js-base {
-    display: none;
-}
+    display: none;}
 
 
 /*以下サイドメニュー*/
@@ -87,36 +72,26 @@ body header {
     overflow-y: auto;
     transition: left 0.3s ease;
     /* アニメーション */
-    padding: 20px;
-}
+    padding: 20px;}
 .menu h2 {
-    margin-top: 0;
-}
+    margin-top: 0;}
 .menu ul {
     list-style: none;
-    padding: 0;
-}
+    padding: 0;}
 .menu li {
-    margin: 15px 0;
-}
+    margin: 15px 0;}
 .menu li a {
     color: white;
-    text-decoration: none;
-}
+    text-decoration: none;}
 .menu li a:hover {
-    text-decoration: underline;
-}
+    text-decoration: underline;}
 /* メニューが表示されているときのスタイル */
 .menu.active {
     left: 0;
-    /* メニューを画面内に表示 */
-}
+    /* メニューを画面内に表示 */}
 .title {
-    display: none;
-}
+    display: none;}
 .menu-group {
-    display: none;
-}
+    display: none;}
 .menu-item {
-    display: none;
-}
+    display: none;}
