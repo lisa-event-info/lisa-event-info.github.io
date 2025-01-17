@@ -11,9 +11,10 @@
 
 <body>
     <footer>
-        <a href="event.html" class="BackPage">戻る</a>
+        <a href="event-ca.html" class="BackPage">戻る</a>
     </footer>
-    
+
+    <!--サイドメニュー、モバイルに表示-->
     <button id="menuButton">≡</button>
     <div id="sideMenu" class="menu">
         <h1>LiSA</h1>
@@ -41,20 +42,22 @@
             }
         });
     </script>
-    <!--<header>ヘッダー、PCに表示
+    <!--ヘッダー、PCに表示-->
+    <header>
+        
         <h1 class="title">LiSA</h1>
         <ul class="menu-group">
             <li class="menu-item"><a href="index.html">ホーム</a></li>
-            <li class="menu-item"><a href="event.html">イベント情報</a></li>
+            <li class="menu-item"><a href="event-ca.html">イベント情報</a></li>
             <li class="menu-item"><a href="form.html">情報提供はこちら</a></li>
         </ul>
-    </header>-->
+    </header>
 
     <h1 id="h1-text">Now Loading...</h1>
     <ul>
-        <li id="title-text"></li>
-        <li id="time-text"></li>
-        <li id="explanation-text"></li>
+        <li id="title-text" class="spreadsheets--item"></li>
+        <li id="time-text" class="spreadsheets--item"></li>
+        <li id="explanation-text" class="spreadsheets--item"></li>
     </ul>
     <script>
         const apiURL = "https://script.google.com/macros/s/AKfycbwj_2jYFAV0NJCd24M-WzDuC1yJL1o9T6rHmPZJqPaxzBurIWITFjAjp15s7V24Zd6yZg/exec";
@@ -75,7 +78,7 @@
 
             if (result) {
                 // 一致するオブジェクトが存在する場合
-                document.getElementById('h1-text').innerHTML = result.content + "の詳細";
+                document.getElementById('h1-text').innerHTML = "「" + result.content + "」の詳細";
                 document.getElementById('title-text').innerHTML = "場所: " + result.title;
                 document.getElementById('time-text').innerHTML = "日時: " + result.time;
                 document.getElementById('explanation-text').innerHTML = "説明: " + result.explanation;
@@ -88,3 +91,5 @@
     </script>
 </body>
 </html>
+
+<!--コピーするときはhrefを確認-->

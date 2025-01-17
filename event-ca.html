@@ -96,7 +96,8 @@
     <footer>
         <a href="index.html" class="BackPage">戻る</a>
     </footer>
-
+    
+    <!--サイドメニュー、モバイルに表示-->
     <button id="menuButton">≡</button>
     <div id="sideMenu" class="menu">
         <h1>LiSA</h1>
@@ -124,14 +125,15 @@
             }
         });
     </script>
-    <!--<header>ヘッダー、PCに表示
+    <header>
+        
         <h1 class="title">LiSA</h1>
         <ul class="menu-group">
             <li class="menu-item"><a href="index.html">ホーム</a></li>
-            <li class="menu-item"><a href="event.html">イベント情報</a></li>
+            <li class="menu-item"><a href="event-ca.html">イベント情報</a></li>
             <li class="menu-item"><a href="form.html">情報提供はこちら</a></li>
         </ul>
-    </header>-->
+    </header>
 
     <h1>LiSA校のイベント情報を発信しています</h1>
     <button id="changeCalender">カレンダー表示にする</button>
@@ -230,7 +232,7 @@
                     copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
 
                     // もしキーワードがある場合、その詳細に飛ぶURLを載せる
-                    if (entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content + " <a href='explanation.html?keyword=" + entry.keyword + "'>詳細</a>";
+                    if (entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content + " <a href='0-explanation-test.html?keyword=" + entry.keyword + "'>詳細</a>";
 
                     if (entry.time != '') {
                         spreadsheets.appendChild(copy);
