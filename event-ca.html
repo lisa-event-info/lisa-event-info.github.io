@@ -348,6 +348,9 @@
             if (eventsCount[`${currentYear}/${currentMonth-1}`] == undefined) {
                 eventsCount[`${currentYear}/${currentMonth-1}`] = 0;
             }
+            if (eventsCount[`${currentYear-1}/12`] == undefined) {
+                eventsCount[`${currentYear-1}/12`] = 0;
+            }
             document.getElementById('prevCount').textContent = (currentMonth < 11)?eventsCount[`${currentYear}/0${currentMonth-1}`]:eventsCount[`${currentYear}/${currentMonth-1}`];
             
             if (currentMonth == 1) document.getElementById('prevCount').textContent = eventsCount[`${currentYear-1}/12`];
