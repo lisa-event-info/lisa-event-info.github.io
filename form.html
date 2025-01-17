@@ -13,7 +13,8 @@
     <footer>
         <a href="index.html" class="BackPage">戻る</a>
     </footer>
-    
+
+    <!--サイドメニュー、モバイルに表示-->
     <button id="menuButton">≡</button>
     <div id="sideMenu" class="menu">
         <h1>LiSA</h1>
@@ -41,23 +42,25 @@
             }
         });
     </script>
-    <!--<header>ヘッダー、PCに表示
-        <h1 class="title">LiSA</h1>
+
+    <!--ヘッダー、PCに表示-->
+    <header>
+    <h1 class="title">LiSA</h1>
         <ul class="menu-group">
             <li class="menu-item"><a href="index.html">ホーム</a></li>
-            <li class="menu-item"><a href="event.html">イベント情報</a></li>
+            <li class="menu-item"><a href="event-ca.html">イベント情報</a></li>
             <li class="menu-item"><a href="form.html">情報提供はこちら</a></li>
         </ul>
-    </header>-->
+    </header>
 
     <h1>情報提供用フォーム</h1>
     <h3>イベントの情報をお持ちの方は、是非！提供お願いします！</h3>
 
     <!--「フォームへ」のボタン-->
-    <a href="https://forms.gle/8g6e2R3LZDptNUGA8" target="blank" class="form_btn">フォームはこちら</a>
+    <a href="https://forms.gle/8g6e2R3LZDptNUGA8" class="form_btn" target="blank">フォームはこちら</a>
     <h3>※学校のアカウントが必要です</h3>
-    <style media="(min-width:801px)">/*PC用書式*/
-        /*フォームボタンの見た目*/
+    <style media="(min-width:801px)">/*★PC用書式*/
+        /*「フォームへ」ボタンの見た目*/
         .form_btn {
             display: inline-block;
             padding: 10px 15px 10px 15px;
@@ -76,8 +79,8 @@
             color: black;
         }
     </style>
-    <style media="(max-width:800px)">/*モバイル用書式*/
-        /*「フォームへ」のボタンの見た目*/
+    <style media="(max-width:800px)">/*★モバイル用書式*/
+        /*「フォームへ」ボタンの見た目*/
         .form_btn {
             display: inline-block;
             padding: 10px 15px 10px 15px;

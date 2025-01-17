@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>イベント</title>
     <link href="PC.css" rel="stylesheet" type="text/css" media="(min-width:801px)" />
     <link href="mobile.css" rel="stylesheet" type="text/css" media="(max-width:800px)" />
     <link rel="icon" href="https://github.com/user-attachments/assets/e9393483-1cf0-4685-a2ce-a0aec929cb29">
@@ -125,9 +125,10 @@
             }
         });
     </script>
+
+    <!--ヘッダー、PCに表示-->
     <header>
-        
-        <h1 class="title">LiSA</h1>
+    <h1 class="title">LiSA</h1>
         <ul class="menu-group">
             <li class="menu-item"><a href="index.html">ホーム</a></li>
             <li class="menu-item"><a href="event-ca.html">イベント情報</a></li>
@@ -232,7 +233,7 @@
                     copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
 
                     // もしキーワードがある場合、その詳細に飛ぶURLを載せる
-                    if (entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content + " <a href='0-explanation-test.html?keyword=" + entry.keyword + "'>詳細</a>";
+                    if (entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content + " <a href='explanation.html?keyword=" + entry.keyword + "'>詳細</a>";
 
                     if (entry.time != '') {
                         spreadsheets.appendChild(copy);
