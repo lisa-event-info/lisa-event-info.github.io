@@ -228,17 +228,13 @@
 
                 eventsCount[yearMonthKey]++; // イベント個数の追加
 
-                if ((year >= today.getFullYear() && month >= (today.getMonth()+1) && day >= today.getDate()) || year > today.getFullYear()) {
+                copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
 
-                    copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
+                // もしキーワードがある場合、その詳細に飛ぶURLを載せる
+                if (entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content + " <a href='explanation.html?keyword=" + entry.keyword + "'>詳細</a>";
 
-                    // もしキーワードがある場合、その詳細に飛ぶURLを載せる
-                    if (entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content + " <a href='explanation.html?keyword=" + entry.keyword + "'>詳細</a>";
-
-                    if (entry.time != '') {
-                        spreadsheets.appendChild(copy);
-                    }
-
+                if (entry.time != '') {
+                    spreadsheets.appendChild(copy);
                 }
 
                 loadTextDisplay();
