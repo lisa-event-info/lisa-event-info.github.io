@@ -97,7 +97,7 @@
     <footer>
         <a href="0-index-test.html" class="BackPage">戻る</a>
     </footer>
-    
+
     <!--サイドメニュー、モバイルに表示-->
     <button id="menuButton">≡</button>
     <div id="sideMenu" class="menu">
@@ -129,7 +129,7 @@
 
     <!--ヘッダー、PCに表示-->
     <header>
-    <h1 class="title">LiSA</h1>
+        <h1 class="title">LiSA</h1>
         <ul class="menu-group">
             <li class="menu-item"><a href="0-index-test.html">ホーム</a></li>
             <li class="menu-item"><a href="0-event-test-ca.html">イベント情報</a></li>
@@ -229,7 +229,6 @@
 
                 eventsCount[yearMonthKey]++; // イベント個数の追加
 
-                if ((year >= today.getFullYear() && month >= (today.getMonth()+1) && day >= today.getDate()) || year > today.getFullYear()) {
 
                     copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
 
@@ -239,8 +238,6 @@
                     if (entry.time != '') {
                         spreadsheets.appendChild(copy);
                     }
-
-                }
 
                 loadTextDisplay();
             });
@@ -334,28 +331,28 @@
             generateCalendar(currentYear, currentMonth, eventsData);
 
             // 来月分のイベント個数の表示
-            if (eventsCount[`${currentYear}/0${currentMonth+1}`] == undefined) {
-                eventsCount[`${currentYear}/0${currentMonth+1}`] = 0;
+            if (eventsCount[`${currentYear}/0${currentMonth + 1}`] == undefined) {
+                eventsCount[`${currentYear}/0${currentMonth + 1}`] = 0;
             }
-            if (eventsCount[`${currentYear}/${currentMonth+1}`] == undefined) {
-                eventsCount[`${currentYear}/${currentMonth+1}`] = 0;
+            if (eventsCount[`${currentYear}/${currentMonth + 1}`] == undefined) {
+                eventsCount[`${currentYear}/${currentMonth + 1}`] = 0;
             }
-            document.getElementById('nextCount').textContent = (currentMonth < 9)?eventsCount[`${currentYear}/0${currentMonth+1}`]:eventsCount[`${currentYear}/${currentMonth+1}`];
-            if (currentMonth == 12) document.getElementById('nextCount').textContent = eventsCount[`${currentYear+1}/01`];
+            document.getElementById('nextCount').textContent = (currentMonth < 9) ? eventsCount[`${currentYear}/0${currentMonth + 1}`] : eventsCount[`${currentYear}/${currentMonth + 1}`];
+            if (currentMonth == 12) document.getElementById('nextCount').textContent = eventsCount[`${currentYear + 1}/01`];
 
             // 先月分のイベント個数の表示
-            if (eventsCount[`${currentYear}/0${currentMonth-1}`] == undefined) {
-                eventsCount[`${currentYear}/0${currentMonth-1}`] = 0;
+            if (eventsCount[`${currentYear}/0${currentMonth - 1}`] == undefined) {
+                eventsCount[`${currentYear}/0${currentMonth - 1}`] = 0;
             }
-            if (eventsCount[`${currentYear}/${currentMonth-1}`] == undefined) {
-                eventsCount[`${currentYear}/${currentMonth-1}`] = 0;
+            if (eventsCount[`${currentYear}/${currentMonth - 1}`] == undefined) {
+                eventsCount[`${currentYear}/${currentMonth - 1}`] = 0;
             }
-            if (eventsCount[`${currentYear-1}/12`] == undefined) {
-                eventsCount[`${currentYear-1}/12`] = 0;
+            if (eventsCount[`${currentYear - 1}/12`] == undefined) {
+                eventsCount[`${currentYear - 1}/12`] = 0;
             }
-            document.getElementById('prevCount').textContent = (currentMonth < 11)?eventsCount[`${currentYear}/0${currentMonth-1}`]:eventsCount[`${currentYear}/${currentMonth-1}`];
-            
-            if (currentMonth == 1) document.getElementById('prevCount').textContent = eventsCount[`${currentYear-1}/12`];
+            document.getElementById('prevCount').textContent = (currentMonth < 11) ? eventsCount[`${currentYear}/0${currentMonth - 1}`] : eventsCount[`${currentYear}/${currentMonth - 1}`];
+
+            if (currentMonth == 1) document.getElementById('prevCount').textContent = eventsCount[`${currentYear - 1}/12`];
 
             loadTextDisplay();
         }
