@@ -2,7 +2,7 @@
 body {
     color: black;
     /*background-color: lightgray;*/
-    background-image: url(./Kaken-BG-5_4.0.jpg);
+    background-image: url(../Kaken-BG-5_4.0.jpg);
     font-size: 1.5vw;
     line-height: 1.4;
     font-family: monospace;
@@ -71,7 +71,7 @@ body footer {
 body header{
     width: 100%;
     display: flex;
-    background-image: url(./Kaken-BG-9_4.jpg);
+    background-image: url(../Kaken-BG-9_4.jpg);
     position:absolute;
     top:0px;
     left:0px;}
