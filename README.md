@@ -5,6 +5,7 @@ LiSA Event Information
 
 
 ★次開いたときにやること
+・公開版のヘッダーの幅変更
 ・背景画像を薄くする。
 ・レイヤー制御
 ・文字の後ろに薄い白色背景追加
@@ -17,6 +18,6 @@ LiSA Event Information
 ・スマホ版marginの調整
 ・mobile.cssに.MainTitleタグを追加
 ・画像復旧
-・公開版のヘッダーの幅変更
+・公開版のヘッダーの幅変更...できてない..だとぉっ!!
 ・公開版のCSSからliタグh2タグ削除、.spreadsheet--itemタグ.BackPageタグ.homeタグ.MainTitleタグ追加、その他調整
 ・index、0-index-test以外のページの左上にLiSAアイコンを追加
