@@ -28,3 +28,6 @@ pタグはmobile.cssで無効化されている。
 ・スマホ版marginの調整
 ・mobile.cssに.MainTitleタグを追加
 ・画像復旧
+・公開版のヘッダーの幅変更
+・公開版のCSSからliタグh2タグ削除、.spreadsheet--itemタグ.BackPageタグ.homeタグ.MainTitleタグ追加、その他調整
+・index、0-index-test以外のページの左上にLiSAアイコンを追加
