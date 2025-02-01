@@ -27,3 +27,4 @@ pタグはmobile.cssで無効化されている。
 ・ヘッダーの幅を調整（細い方に合わせる）
 ・スマホ版marginの調整
 ・mobile.cssに.MainTitleタグを追加
+・画像復旧
