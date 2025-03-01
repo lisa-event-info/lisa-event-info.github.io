@@ -1,3 +1,4 @@
-order deny,allow
-deny from all
-allow from 192.168.81.233
+<RequireAll>
+    Require all denied
+    Require ip 192.168.81.233
+</RequireAll>
