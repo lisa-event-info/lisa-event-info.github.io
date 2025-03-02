@@ -1,4 +1,7 @@
-# AccessControl IP/HOST
-order deny,allow
-deny from all
-allow from 10.57.32.19
+<system.webServer>
+  <security>
+    <ipSecurity allowUnlisted="false" denyAction="NotFound">
+      <add allowed="true" ipAddress="XXX.XXX.XXX.XXX" subnetMask="255.255.255.240"/>
+    </ipSecurity>
+  </security>
+</system.webServer>
