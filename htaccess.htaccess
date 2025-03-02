@@ -1,4 +1,4 @@
 <RequireAll>
     Require all denied
-    Require ip 
+    Require ip 10.57.32.19
 </RequireAll>
