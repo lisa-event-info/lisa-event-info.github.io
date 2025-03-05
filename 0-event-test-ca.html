@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>イベント</title>
-    <link href="PC2.css" rel="stylesheet" type="text/css" media="(min-width:801px)" />
-    <link href="mobile2.css" rel="stylesheet" type="text/css" media="(max-width:800px)" />
+    <link href="PC.css" rel="stylesheet" type="text/css" media="(min-width:801px)" />
+    <link href="mobile.css" rel="stylesheet" type="text/css" media="(max-width:800px)" />
     <link rel="icon" href="../Background-Image/lisa-logo-clear_4.png">
     <title>イベント情報</title>
     <style rel="stylesheet" type="text/css" media="(min-width:801px)">
@@ -95,17 +94,17 @@
 
 <body>
     <footer>
-        <a href="0-index-test.html" class="BackPage">戻る</a>
+        <a href="index.html" class="BackPage">戻る</a>
     </footer>
-
+    
     <!--サイドメニュー、モバイルに表示-->
     <button id="menuButton">≡</button>
     <div id="sideMenu" class="menu">
         <h1>LiSA</h1>
         <ul>
-            <li><a href="0-index-test.html">ホーム</a></li>
-            <li><a href="0-event-test-ca.html">イベント情報</a></li>
-            <li><a href="0-form-test.html">情報提供はこちら</a></li>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="event-ca.html">イベント情報</a></li>
+            <li><a href="form.html">情報提供はこちら</a></li>
         </ul>
     </div>
     <script>
@@ -132,14 +131,14 @@
         <img src="../Background-Image/lisa-logo-clear_3.png" width="3.5%" height="3.5%">
         <h1 class="title">LiSA</h1>
         <ul class="menu-group">
-            <li class="menu-item"><a href="0-index-test.html">ホーム</a></li>
-            <li class="menu-item"><a href="0-event-test-ca.html">イベント情報</a></li>
-            <li class="menu-item"><a href="0-form-test.html">情報提供はこちら</a></li>
+            <li class="menu-item"><a href="index.html">ホーム</a></li>
+            <li class="menu-item"><a href="event-ca.html">イベント情報</a></li>
+            <li class="menu-item"><a href="form.html">情報提供はこちら</a></li>
         </ul>
     </header>
 
     <h1>LiSA校のイベント情報を発信しています</h1>
-    <button id="changeCalender">カレンダー表示にする</button>
+    <button id="changeCalender" style="display : none">カレンダー表示にする</button>
 
     <br>
     <div id="calender-div" style="display : none">
@@ -231,11 +230,10 @@
                     eventsCount.push({ date: yearMonthKey, count: 1 }); // 新しく追加
                 }
 
-
                 copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
 
                 // もしキーワードがある場合、その詳細に飛ぶURLを載せる
-                if (entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content + " <a href='0-explanation-test.html?keyword=" + entry.keyword + "'>詳細</a>";
+                if (entry.keyword != "") copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content + " <a href='explanation.html?keyword=" + entry.keyword + "'>詳細</a>";
 
                 if (entry.time != '') {
                     spreadsheets.appendChild(copy);
@@ -358,6 +356,7 @@
         function loadTextDisplay() {
             document.getElementById('load-text').textContent = "";
             document.getElementById('load-base').style.display = "none";
+            document.getElementById('changeCalender').style.display = "block";
         }
 
         // 初期表示
