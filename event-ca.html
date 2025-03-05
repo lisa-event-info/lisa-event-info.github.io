@@ -208,7 +208,7 @@
         let currentMonth = new Date().getMonth() + 1;
         var today = new Date();
         let eventsData = [];
-        let eventsCount = {};
+        let eventsCount = [];
 
         // JSONファイルを読み込み、データを取得する関数
         async function loadJsonData() {
@@ -223,11 +223,12 @@
                 const [year, month, day] = entry.time.split("/"); // 日付を分割
                 const yearMonthKey = `${year}/${month}`; // "年/月" の形式を作成
 
-                if (!eventsCount[yearMonthKey]) {
-                    eventsCount[yearMonthKey] = 0;
+                const eventer = eventsCount.find(e => e.date === yearMonthKey);
+                if (eventer) {
+                    eventer.count += 1;
+                } else {
+                    eventsCount.push({ date: yearMonthKey, count: 1 }); // 新しく追加
                 }
-
-                eventsCount[yearMonthKey]++; // イベント個数の追加
 
                 copy.querySelector('.spreadsheets--content').innerHTML = entry.time + " " + entry.title + " " + entry.content;
 
@@ -330,31 +331,23 @@
             generateCalendar(currentYear, currentMonth, eventsData);
 
             // 来月分のイベント個数の表示
-            if (eventsCount[`${currentYear}/0${currentMonth+1}`] == undefined) {
-                eventsCount[`${currentYear}/0${currentMonth+1}`] = 0;
+            let c = 0;
+            for (let event of eventsCount) {
+                let eventyear = parseInt(event.date.substr(0, 4), 10);
+                let eventmonth = parseInt(event.date.substr(5, 2), 10);
+                if (currentYear == eventyear && currentMonth < eventmonth) c += event.count;
+                if (currentYear < eventyear) c += event.count;
             }
-            if (eventsCount[`${currentYear}/${currentMonth+1}`] == undefined) {
-                eventsCount[`${currentYear}/${currentMonth+1}`] = 0;
-            }
-            if (eventsCount[`${currentYear+1}/01`] == undefined) {
-                eventsCount[`${currentYear+1}/01`] = 0;
-            }
-            document.getElementById('nextCount').textContent = (currentMonth < 9)?eventsCount[`${currentYear}/0${currentMonth+1}`]:eventsCount[`${currentYear}/${currentMonth+1}`];
-            if (currentMonth == 12) document.getElementById('nextCount').textContent = eventsCount[`${currentYear+1}/01`];
-
+            document.getElementById('nextCount').textContent = c;
             // 先月分のイベント個数の表示
-            if (eventsCount[`${currentYear}/0${currentMonth-1}`] == undefined) {
-                eventsCount[`${currentYear}/0${currentMonth-1}`] = 0;
+            c = 0;
+            for (let event of eventsCount) {
+                let eventyear = parseInt(event.date.substr(0, 4), 10);
+                let eventmonth = parseInt(event.date.substr(5, 2), 10);
+                if (currentYear == eventyear && currentMonth > eventmonth) c += event.count;
+                if (currentYear > eventyear) c += event.count;
             }
-            if (eventsCount[`${currentYear}/${currentMonth-1}`] == undefined) {
-                eventsCount[`${currentYear}/${currentMonth-1}`] = 0;
-            }
-            if (eventsCount[`${currentYear-1}/12`] == undefined) {
-                eventsCount[`${currentYear-1}/12`] = 0;
-            }
-            document.getElementById('prevCount').textContent = (currentMonth < 11)?eventsCount[`${currentYear}/0${currentMonth-1}`]:eventsCount[`${currentYear}/${currentMonth-1}`];
-            
-            if (currentMonth == 1) document.getElementById('prevCount').textContent = eventsCount[`${currentYear-1}/12`];
+            document.getElementById('prevCount').textContent = c;
 
             loadTextDisplay();
         }
