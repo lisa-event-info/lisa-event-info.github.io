@@ -138,7 +138,7 @@
     </header>
 
     <h1>LiSA校のイベント情報を発信しています</h1>
-    <button id="changeCalender">カレンダー表示にする</button>
+    <button id="changeCalender" style="display : none">カレンダー表示にする</button>
 
     <br>
     <div id="calender-div" style="display : none">
@@ -356,6 +356,7 @@
         function loadTextDisplay() {
             document.getElementById('load-text').textContent = "";
             document.getElementById('load-base').style.display = "none";
+            document.getElementById('changeCalender').style.display = "block";
         }
 
         // 初期表示
