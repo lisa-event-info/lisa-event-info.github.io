@@ -8,16 +8,17 @@
     <link href="mobile.css" rel="stylesheet" type="text/css" media="(max-width:800px)" />
     <link rel="icon" href="../Background-Image/lisa-logo-clear_4.png">
 </head>
-<body style="position: relative;">
-    <p class="Fin">活動終了！！<br>このサイトを使ってくださってありがとうございました！</p>
+<body>
+    <div class="Findiv">
+        <div class="Fin">活動終了！！<br>このサイトを使ってくださってありがとうございました！</div>
+    </div>
     <style>
+        .Findiv{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         .Fin{
-            display: block;
-            margin: 0 auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
             color: #008080;
             font-weight: 900;
             font-size: 4vw;
@@ -34,4 +35,6 @@
             }
         }
     </style>
+
+    
 </body>
